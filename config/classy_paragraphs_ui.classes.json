@@ -1,0 +1,166 @@
+{
+    "_config_name": "classy_paragraphs_ui.classes",
+    "left": {
+        "name": "left",
+        "label": "Left",
+        "sets": {
+            "position": "position",
+            "width": 0,
+            "bgcolor": 0,
+            "txtcolor": 0
+        }
+    },
+    "right": {
+        "name": "right",
+        "label": "Right",
+        "sets": {
+            "position": "position",
+            "width": 0,
+            "bgcolor": 0,
+            "textcolor": 0
+        }
+    },
+    "top": {
+        "name": "top",
+        "label": "Top",
+        "sets": {
+            "position": "position",
+            "width": 0,
+            "bgcolor": 0,
+            "textcolor": 0
+        }
+    },
+    "bottom": {
+        "name": "bottom",
+        "label": "Bottom",
+        "sets": {
+            "position": "position",
+            "width": 0,
+            "bgcolor": 0,
+            "textcolor": 0
+        }
+    },
+    "fullwidth": {
+        "name": "fullwidth",
+        "label": "Full width",
+        "sets": {
+            "width": "width",
+            "position": 0,
+            "bgcolor": 0,
+            "textcolor": 0
+        }
+    },
+    "contentwidth": {
+        "name": "contentwidth",
+        "label": "Content width",
+        "sets": {
+            "width": "width",
+            "position": 0,
+            "bgcolor": 0,
+            "textcolor": 0
+        }
+    },
+    "whitebg": {
+        "name": "whitebg",
+        "label": "White",
+        "sets": {
+            "bgcolor": "bgcolor",
+            "position": 0,
+            "width": 0,
+            "textcolor": 0
+        }
+    },
+    "tealbg": {
+        "name": "tealbg",
+        "label": "Teal",
+        "sets": {
+            "bgcolor": "bgcolor",
+            "position": 0,
+            "width": 0,
+            "textcolor": 0
+        }
+    },
+    "contained": {
+        "name": "contained",
+        "label": "Full width, contained",
+        "sets": {
+            "width": "width",
+            "position": 0,
+            "bgcolor": 0
+        }
+    },
+    "textbucket": {
+        "name": "textbucket",
+        "label": "Text",
+        "sets": {
+            "bucket": "bucket",
+            "position": 0,
+            "width": 0,
+            "bgcolor": 0
+        }
+    },
+    "imagebucket": {
+        "name": "imagebucket",
+        "label": "Image",
+        "sets": {
+            "bucket": "bucket",
+            "position": 0,
+            "width": 0,
+            "bgcolor": 0
+        }
+    },
+    "greybg": {
+        "name": "greybg",
+        "label": "Grey",
+        "sets": {
+            "bgcolor": "bgcolor",
+            "position": 0,
+            "width": 0,
+            "bucket": 0
+        }
+    },
+    "col-2": {
+        "name": "col-2",
+        "label": "Two Columns",
+        "sets": {
+            "columns": "columns",
+            "position": 0,
+            "width": 0,
+            "bgcolor": 0,
+            "bucket": 0
+        }
+    },
+    "col-3": {
+        "name": "col-3",
+        "label": "Three Columns",
+        "sets": {
+            "columns": "columns",
+            "position": 0,
+            "width": 0,
+            "bgcolor": 0,
+            "bucket": 0
+        }
+    },
+    "col-4": {
+        "name": "col-4",
+        "label": "Four Columns",
+        "sets": {
+            "columns": "columns",
+            "position": 0,
+            "width": 0,
+            "bgcolor": 0,
+            "bucket": 0
+        }
+    },
+    "col-5": {
+        "name": "col-5",
+        "label": "Five Columns",
+        "sets": {
+            "columns": "columns",
+            "position": 0,
+            "width": 0,
+            "bgcolor": 0,
+            "bucket": 0
+        }
+    }
+}

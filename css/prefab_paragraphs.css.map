@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,uBAAuB",
+    "sources": [
+        "prefab_paragraphs.scss"
+    ],
+    "names": [],
+    "file": "prefab_paragraphs.css"
+}

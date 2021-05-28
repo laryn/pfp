@@ -1,0 +1,9 @@
+name = Prefab Paragraphs
+description = Pre-fabricated Paragraph Types to get you started quickly.
+package = Paragraphs
+backdrop = 1.x
+type = module
+
+dependencies[] = classy_paragraphs
+
+stylesheets[all][] = css/prefab_paragraphs.css

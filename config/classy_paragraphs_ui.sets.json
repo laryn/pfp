@@ -1,0 +1,23 @@
+{
+    "_config_name": "classy_paragraphs_ui.sets",
+    "position": {
+        "name": "position",
+        "label": "Position"
+    },
+    "width": {
+        "name": "width",
+        "label": "Width"
+    },
+    "bgcolor": {
+        "name": "bgcolor",
+        "label": "Background color"
+    },
+    "bucket": {
+        "name": "bucket",
+        "label": "Bucket type"
+    },
+    "columns": {
+        "name": "columns",
+        "label": "Columns"
+    }
+}

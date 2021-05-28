@@ -1,0 +1,14 @@
+# Prefab Paragraphs
+
+Pre-fabricated Paragraph Types to get you started quickly.
+
+This module is just intended to get you going with some "out of the box"
+Paragraph Types. If you install these Paragraph Types and then remove this
+module, your Paragraph Types remain. Likewise, once a Paragraph Type has
+been installed, this module will not reinstall or update it -- there is no
+ongoing monitoring or updates once the Paragraph Types are implemented.
+
+Initial implementation is just a collection of config files that can be
+imported using Backdrop's CMI. Long-term, perhaps implementing this as
+an installable module that let's you select which elements to activate via
+the UI could be an option.
