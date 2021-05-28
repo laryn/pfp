@@ -119,8 +119,19 @@
             "bucket": 0
         }
     },
-    "col-2": {
-        "name": "col-2",
+    "1col": {
+        "name": "1col",
+        "label": "One Column",
+        "sets": {
+            "columns": "columns",
+            "position": 0,
+            "width": 0,
+            "bgcolor": 0,
+            "bucket": 0
+        }
+    },
+    "2col": {
+        "name": "2col",
         "label": "Two Columns",
         "sets": {
             "columns": "columns",
@@ -130,8 +141,8 @@
             "bucket": 0
         }
     },
-    "col-3": {
-        "name": "col-3",
+    "3col": {
+        "name": "3col",
         "label": "Three Columns",
         "sets": {
             "columns": "columns",
@@ -141,8 +152,8 @@
             "bucket": 0
         }
     },
-    "col-4": {
-        "name": "col-4",
+    "4col": {
+        "name": "4col",
         "label": "Four Columns",
         "sets": {
             "columns": "columns",
@@ -152,8 +163,8 @@
             "bucket": 0
         }
     },
-    "col-5": {
-        "name": "col-5",
+    "5col": {
+        "name": "5col",
         "label": "Five Columns",
         "sets": {
             "columns": "columns",
