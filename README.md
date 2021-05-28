@@ -1,4 +1,4 @@
-# Prefab Paragraphs
+# Prefab Paragraph Types
 
 Pre-fabricated Paragraph Types to get you started quickly.
 
@@ -15,9 +15,13 @@ the UI could be an option.
 
 ## Config files
 
-1. [Classy Paragraphs](https://github.com/CEDC/prefab_paragraphs/wiki/Classy-Paragraphs)
+1. **[Classy Paragraphs](https://github.com/CEDC/prefab_paragraphs/wiki/Classy-Paragraphs)** -
   If you have your own Classy Paragraphs already defined, don't import these
   files or your will be overwritten. (Future plan: to allow you to select
   which Classy Paragraph classes/sets to import, and/or to automatically
   import only needed classes/sets for other Paragraph Types, without
   overwriting existing Classy Paragraph config)
+
+2. **Prefab Paragraph Types** -
+  - [Embed](https://github.com/CEDC/prefab_paragraphs/wiki/Embed) -
+  Simple text area configured to "Raw HTML" to allow code embedding.
