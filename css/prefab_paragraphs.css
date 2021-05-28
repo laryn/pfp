@@ -2,28 +2,28 @@
 /* Breakpoints - to match grid-flexbox.css */
 /* Text - Columns */
 .paragraphs-item.pfp-col1 .field-name-pfp-text-area {
-  -webkit-columns: 1;
-          columns: 1;
+  -webkit-columns: 1 16rem;
+          columns: 1 16rem;
 }
 
 .paragraphs-item.pfp-col2 .field-name-pfp-text-area {
-  -webkit-columns: 2;
-          columns: 2;
+  -webkit-columns: 2 16rem;
+          columns: 2 16rem;
 }
 
 .paragraphs-item.pfp-col3 .field-name-pfp-text-area {
-  -webkit-columns: 3;
-          columns: 3;
+  -webkit-columns: 3 16rem;
+          columns: 3 16rem;
 }
 
 .paragraphs-item.pfp-col4 .field-name-pfp-text-area {
-  -webkit-columns: 4;
-          columns: 4;
+  -webkit-columns: 4 16rem;
+          columns: 4 16rem;
 }
 
 .paragraphs-item.pfp-col5 .field-name-pfp-text-area {
-  -webkit-columns: 5;
-          columns: 5;
+  -webkit-columns: 5 16rem;
+          columns: 5 16rem;
 }
 
 .paragraphs-item.pfp-colauto .field-name-pfp-text-area {

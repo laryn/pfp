@@ -3,34 +3,35 @@
 @import 'variables.scss';
 
 /* Text - Columns */
+$mincol_width: 16rem;
 .paragraphs-item.pfp-col1 {
   .field-name-pfp-text-area {
-    columns: 1;
+    columns: 1 $mincol_width;
   }
 }
 .paragraphs-item.pfp-col2 {
   .field-name-pfp-text-area {
-    columns: 2;
+    columns: 2 $mincol_width;
   }
 }
 .paragraphs-item.pfp-col3 {
   .field-name-pfp-text-area {
-    columns: 3;
+    columns: 3 $mincol_width;
   }
 }
 .paragraphs-item.pfp-col4 {
   .field-name-pfp-text-area {
-    columns: 4;
+    columns: 4 $mincol_width;
   }
 }
 .paragraphs-item.pfp-col5 {
   .field-name-pfp-text-area {
-    columns: 5;
+    columns: 5 $mincol_width;
   }
 }
 .paragraphs-item.pfp-colauto {
   .field-name-pfp-text-area {
-    columns: 16rem auto;
+    columns: $mincol_width auto;
   }
 }
 
