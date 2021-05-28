@@ -5,7 +5,7 @@
     "bundle": "pfp_gallery",
     "label": "Columns",
     "widget": {
-        "weight": "5",
+        "weight": "6",
         "type": "options_select",
         "module": "options",
         "active": 1,

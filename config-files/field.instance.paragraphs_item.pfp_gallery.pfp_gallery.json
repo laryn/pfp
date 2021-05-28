@@ -42,7 +42,7 @@
         "max_dimensions": "",
         "min_dimensions": "",
         "alt_field": 1,
-        "title_field": 0,
+        "title_field": 1,
         "orientate": 1,
         "default_image": "",
         "user_register_form": false
@@ -50,21 +50,25 @@
     "display": {
         "default": {
             "label": "hidden",
-            "type": "image",
+            "type": "colorbox",
             "weight": "0",
             "settings": {
-                "image_style": "",
-                "image_link": "",
-                "image_float": "",
-                "image_load": "auto",
+                "colorbox_node_style": "pfp_gallery_thumb",
+                "colorbox_node_style_first": "pfp_gallery_thumb",
+                "colorbox_image_style": "pfp_free_crop",
+                "colorbox_gallery": "post",
+                "colorbox_gallery_custom": "",
+                "colorbox_caption": "auto",
+                "colorbox_caption_custom": "",
                 "field_wrappers": {
                     "field_wrapper": "-",
                     "label_wrapper": "-",
                     "item_wrapper": "-",
                     "field_wrapper_class": ""
-                }
+                },
+                "colorbox_multivalue_index": null
             },
-            "module": "image"
+            "module": "colorbox"
         },
         "paragraphs_editor_preview": {
             "label": "hidden",

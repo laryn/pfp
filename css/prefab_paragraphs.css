@@ -31,6 +31,59 @@
           columns: 16rem auto;
 }
 
+/* Gallery */
+.field-name-pfp-gallery {
+  padding: 2rem 0;
+}
+
+.field-name-pfp-gallery .field-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.field-name-pfp-gallery .field-items .field-item {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  padding: .25rem;
+}
+
+.field-name-pfp-gallery .field-items .field-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.paragraphs-item.pfp-col1 .field-name-pfp-gallery .field-items .field-item {
+  max-width: 100%;
+}
+
+.paragraphs-item.pfp-col2 .field-name-pfp-gallery .field-items .field-item {
+  max-width: calc(100%/2);
+}
+
+.paragraphs-item.pfp-col3 .field-name-pfp-gallery .field-items .field-item {
+  max-width: calc(100%/3);
+}
+
+.paragraphs-item.pfp-col4 .field-name-pfp-gallery .field-items .field-item {
+  max-width: calc(100%/4);
+}
+
+.paragraphs-item.pfp-col5 .field-name-pfp-gallery .field-items .field-item {
+  max-width: calc(100%/5);
+}
+
+.paragraphs-item.pfp-colauto .field-name-pfp-gallery {
+  -webkit-columns: 16rem auto;
+          columns: 16rem auto;
+}
+
 /* Background Color */
 .paragraphs-item.greybg {
   background-color: #efefef;

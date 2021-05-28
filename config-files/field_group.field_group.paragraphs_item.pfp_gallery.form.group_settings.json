@@ -14,13 +14,14 @@
     "label": "Settings",
     "format_type": "fieldset",
     "format_settings": {
-        "formatter": "collapsible",
+        "label": "Settings",
         "instance_settings": {
-            "description": "",
-            "classes": "group-settings field-group-fieldset",
             "required_fields": 1,
-            "id": ""
-        }
+            "id": "",
+            "classes": "group-settings field-group-fieldset",
+            "description": ""
+        },
+        "formatter": "collapsed"
     },
     "collapsible": true,
     "collapsed": false

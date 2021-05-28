@@ -5,7 +5,7 @@
     "bundle": "pfp_gallery",
     "label": "Background color",
     "widget": {
-        "weight": "3",
+        "weight": "5",
         "type": "options_select",
         "module": "options",
         "active": 1,
