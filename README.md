@@ -12,3 +12,12 @@ Initial implementation is just a collection of config files that can be
 imported using Backdrop's CMI. Long-term, perhaps implementing this as
 an installable module that let's you select which elements to activate via
 the UI could be an option.
+
+## Config files
+
+1. [Classy Paragraphs](https://github.com/CEDC/prefab_paragraphs/wiki/Classy-Paragraphs)
+  If you have your own Classy Paragraphs already defined, don't import these
+  files or your will be overwritten. (Future plan: to allow you to select
+  which Classy Paragraph classes/sets to import, and/or to automatically
+  import only needed classes/sets for other Paragraph Types, without
+  overwriting existing Classy Paragraph config)
