@@ -50,6 +50,7 @@
         "default": {
             "label": "hidden",
             "type": "image",
+            "weight": "0",
             "settings": {
                 "image_style": "",
                 "image_link": "",
@@ -62,8 +63,25 @@
                     "field_wrapper_class": ""
                 }
             },
-            "module": "image",
-            "weight": 0
+            "module": "image"
+        },
+        "paragraphs_editor_preview": {
+            "label": "hidden",
+            "type": "image",
+            "weight": "0",
+            "settings": {
+                "image_style": "thumbnail",
+                "image_link": "",
+                "image_float": "",
+                "image_load": "lazy",
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                }
+            },
+            "module": "image"
         }
     }
 }
