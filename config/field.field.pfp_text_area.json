@@ -1,6 +1,6 @@
 {
-    "_config_name": "field.field.field_pfp_text_area",
-    "field_name": "field_pfp_text_area",
+    "_config_name": "field.field.pfp_text_area",
+    "field_name": "pfp_text_area",
     "type": "text_long",
     "translatable": false,
     "module": "text",
