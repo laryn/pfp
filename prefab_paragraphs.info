@@ -5,5 +5,7 @@ backdrop = 1.x
 type = module
 
 dependencies[] = classy_paragraphs
+dependencies[] = field_group
+dependencies[] = field_wrappers
 
 stylesheets[all][] = css/prefab_paragraphs.css

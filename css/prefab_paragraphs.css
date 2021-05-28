@@ -1,2 +1,32 @@
 /* Prefab Paragraphs */
+/* Text - Columns */
+.paragraphs-item.pfp-col1 .field-name-pfp-text-area {
+  -webkit-columns: 1;
+          columns: 1;
+}
+
+.paragraphs-item.pfp-col2 .field-name-pfp-text-area {
+  -webkit-columns: 2;
+          columns: 2;
+}
+
+.paragraphs-item.pfp-col3 .field-name-pfp-text-area {
+  -webkit-columns: 3;
+          columns: 3;
+}
+
+.paragraphs-item.pfp-col4 .field-name-pfp-text-area {
+  -webkit-columns: 4;
+          columns: 4;
+}
+
+.paragraphs-item.pfp-col5 .field-name-pfp-text-area {
+  -webkit-columns: 5;
+          columns: 5;
+}
+
+.paragraphs-item.pfp-colauto .field-name-pfp-text-area {
+  -webkit-columns: 16rem auto;
+          columns: 16rem auto;
+}
 /*# sourceMappingURL=prefab_paragraphs.css.map */

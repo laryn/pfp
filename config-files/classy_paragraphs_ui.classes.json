@@ -119,8 +119,8 @@
             "bucket": 0
         }
     },
-    "1col": {
-        "name": "1col",
+    "pfp-col1": {
+        "name": "pfp-col1",
         "label": "One Column",
         "sets": {
             "columns": "columns",
@@ -130,8 +130,8 @@
             "bucket": 0
         }
     },
-    "2col": {
-        "name": "2col",
+    "pfp-col2": {
+        "name": "pfp-col2",
         "label": "Two Columns",
         "sets": {
             "columns": "columns",
@@ -141,8 +141,8 @@
             "bucket": 0
         }
     },
-    "3col": {
-        "name": "3col",
+    "pfp-col3": {
+        "name": "pfp-col3",
         "label": "Three Columns",
         "sets": {
             "columns": "columns",
@@ -152,8 +152,8 @@
             "bucket": 0
         }
     },
-    "4col": {
-        "name": "4col",
+    "pfp-col4": {
+        "name": "pfp-col4",
         "label": "Four Columns",
         "sets": {
             "columns": "columns",
@@ -163,9 +163,20 @@
             "bucket": 0
         }
     },
-    "5col": {
-        "name": "5col",
+    "pfp-col5": {
+        "name": "pfp-col5",
         "label": "Five Columns",
+        "sets": {
+            "columns": "columns",
+            "position": 0,
+            "width": 0,
+            "bgcolor": 0,
+            "bucket": 0
+        }
+    },
+    "pfp-colauto": {
+        "name": "pfp-colauto",
+        "label": "Auto",
         "sets": {
             "columns": "columns",
             "position": 0,

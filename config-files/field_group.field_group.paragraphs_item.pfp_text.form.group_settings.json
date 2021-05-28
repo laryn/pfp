@@ -1,0 +1,26 @@
+{
+    "_config_name": "field_group.field_group.paragraphs_item.pfp_text.form.group_settings",
+    "group_name": "group_settings",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_text",
+    "mode": "form",
+    "children": [
+        "pfp_columns"
+    ],
+    "parent_name": "",
+    "weight": "2",
+    "label": "Settings",
+    "format_type": "fieldset",
+    "format_settings": {
+        "label": "Settings",
+        "instance_settings": {
+            "required_fields": 1,
+            "id": "",
+            "classes": "group-settings field-group-fieldset",
+            "description": ""
+        },
+        "formatter": "collapsed"
+    },
+    "collapsible": true,
+    "collapsed": false
+}
