@@ -1,0 +1,43 @@
+{
+    "_config_name": "field.instance.paragraphs_item.pfp_gallery.pfp_columns",
+    "field_name": "pfp_columns",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_gallery",
+    "label": "Columns",
+    "widget": {
+        "weight": "5",
+        "type": "options_select",
+        "module": "options",
+        "active": 1,
+        "settings": {
+            "classy_paragraphs_set": ""
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": [
+        {
+            "value": "pfp-col3"
+        }
+    ],
+    "default_value_function": null,
+    "settings": {
+        "classy_paragraphs_set": "columns",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "hidden",
+            "weight": "3",
+            "settings": []
+        },
+        "paragraphs_editor_preview": {
+            "label": "hidden",
+            "type": "hidden",
+            "weight": "2",
+            "settings": []
+        }
+    }
+}

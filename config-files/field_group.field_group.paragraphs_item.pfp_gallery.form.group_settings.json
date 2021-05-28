@@ -1,0 +1,27 @@
+{
+    "_config_name": "field_group.field_group.paragraphs_item.pfp_gallery.form.group_settings",
+    "group_name": "group_settings",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_gallery",
+    "mode": "form",
+    "children": [
+        "pfp_background_color",
+        "pfp_columns",
+        "pfp_width"
+    ],
+    "parent_name": "",
+    "weight": "4",
+    "label": "Settings",
+    "format_type": "fieldset",
+    "format_settings": {
+        "formatter": "collapsible",
+        "instance_settings": {
+            "description": "",
+            "classes": "group-settings field-group-fieldset",
+            "required_fields": 1,
+            "id": ""
+        }
+    },
+    "collapsible": true,
+    "collapsed": false
+}

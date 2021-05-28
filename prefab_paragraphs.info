@@ -9,5 +9,6 @@ dependencies[] = field_group
 dependencies[] = field_wrappers
 dependencies[] = image
 dependencies[] = manualcrop
+dependencies[] = colorbox
 
 stylesheets[all][] = css/prefab_paragraphs.css

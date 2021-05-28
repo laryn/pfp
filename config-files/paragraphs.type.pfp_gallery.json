@@ -1,0 +1,8 @@
+{
+    "_config_name": "paragraphs.type.pfp_gallery",
+    "bundle": "pfp_gallery",
+    "name": "Gallery",
+    "label": "Gallery",
+    "description": "Allows a collection of images to be added, displayed in a Colorbox popup gallery by default.",
+    "locked": 1
+}

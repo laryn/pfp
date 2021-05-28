@@ -1,0 +1,19 @@
+{
+    "_config_name": "image.style.pfp_gallery_thumb",
+    "label": "Gallery thumb",
+    "name": "pfp_gallery_thumb",
+    "effects": [
+        {
+            "name": "manualcrop_crop_and_scale",
+            "data": {
+                "width": "400",
+                "height": "300",
+                "upscale": 1,
+                "respectminimum": 1,
+                "onlyscaleifcrop": 0,
+                "style_name": "pfp_gallery_thumb"
+            },
+            "weight": "0"
+        }
+    ]
+}
