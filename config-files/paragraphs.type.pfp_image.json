@@ -1,0 +1,8 @@
+{
+    "_config_name": "paragraphs.type.pfp_image",
+    "bundle": "pfp_image",
+    "name": "Image",
+    "label": "Image",
+    "description": "Upload a single image, with the ability to crop and designate width.",
+    "locked": 1
+}

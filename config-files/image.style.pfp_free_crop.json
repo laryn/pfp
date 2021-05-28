@@ -1,0 +1,18 @@
+{
+    "_config_name": "image.style.pfp_free_crop",
+    "label": "Free crop",
+    "name": "pfp_free_crop",
+    "effects": [
+        {
+            "name": "manualcrop_crop",
+            "data": {
+                "width": "",
+                "height": "",
+                "keepproportions": 0,
+                "reuse_crop_style": "",
+                "style_name": "pfp_free_crop"
+            },
+            "weight": 0
+        }
+    ]
+}

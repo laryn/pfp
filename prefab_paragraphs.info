@@ -7,5 +7,7 @@ type = module
 dependencies[] = classy_paragraphs
 dependencies[] = field_group
 dependencies[] = field_wrappers
+dependencies[] = image
+dependencies[] = manualcrop
 
 stylesheets[all][] = css/prefab_paragraphs.css
