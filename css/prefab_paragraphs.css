@@ -31,6 +31,16 @@
           columns: 16rem auto;
 }
 
+/* Image */
+.paragraphs-item.fullwidth {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.field-name-pfp-image img {
+  width: 100%;
+}
+
 /* Gallery */
 .field-name-pfp-gallery {
   padding: 2rem 0;
