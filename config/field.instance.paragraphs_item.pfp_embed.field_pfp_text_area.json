@@ -1,6 +1,6 @@
 {
-    "_config_name": "field.instance.paragraphs_item.pfp_embed.field_pfp_text_area",
-    "field_name": "field_pfp_text_area",
+    "_config_name": "field.instance.paragraphs_item.pfp_embed.pfp_text_area",
+    "field_name": "pfp_text_area",
     "entity_type": "paragraphs_item",
     "bundle": "pfp_embed",
     "label": "Text Area",
