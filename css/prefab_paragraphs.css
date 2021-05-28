@@ -1,4 +1,5 @@
 /* Prefab Paragraphs */
+/* Breakpoints - to match grid-flexbox.css */
 /* Text - Columns */
 .paragraphs-item.pfp-col1 .field-name-pfp-text-area {
   -webkit-columns: 1;
@@ -28,5 +29,51 @@
 .paragraphs-item.pfp-colauto .field-name-pfp-text-area {
   -webkit-columns: 16rem auto;
           columns: 16rem auto;
+}
+
+/* Background Color */
+.paragraphs-item.greybg {
+  background-color: #efefef;
+}
+
+/* Width */
+.paragraphs-item.fullwidth, .paragraphs-item.contained {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 1.5rem;
+}
+
+.paragraphs-item.contained > .content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 34em) {
+  .paragraphs-item.contained > .content {
+    width: calc(34em - 2*(.9375rem));
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 48em) {
+  .paragraphs-item.contained > .content {
+    width: calc(45em - 2*(.9375rem));
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 62em) {
+  .paragraphs-item.contained > .content {
+    width: calc(60em - 2*(.9375rem));
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 75em) {
+  .paragraphs-item.contained > .content {
+    width: calc(72.25em - 2*(.9375rem));
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=prefab_paragraphs.css.map */

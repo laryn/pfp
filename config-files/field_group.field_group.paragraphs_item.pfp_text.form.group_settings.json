@@ -5,6 +5,8 @@
     "bundle": "pfp_text",
     "mode": "form",
     "children": [
+        "pfp_background_color",
+        "pfp_width",
         "pfp_columns"
     ],
     "parent_name": "",

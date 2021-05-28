@@ -1,0 +1,22 @@
+{
+    "_config_name": "field.field.pfp_background_color",
+    "field_name": "pfp_background_color",
+    "type": "cp_list",
+    "translatable": false,
+    "module": "classy_paragraphs",
+    "active": 1,
+    "locked": 0,
+    "cardinality": "1",
+    "deleted": 0,
+    "entity_types": [],
+    "settings": {
+        "allowed_values": [],
+        "allowed_values_function": ""
+    },
+    "storage": {
+        "type": "field_sql_storage",
+        "settings": [],
+        "module": "field_sql_storage",
+        "active": 1
+    }
+}
