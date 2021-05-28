@@ -1,0 +1,8 @@
+{
+    "_config_name": "paragraphs.type.pfp_embed",
+    "bundle": "pfp_embed",
+    "name": "Embed",
+    "label": "Embed",
+    "description": "Allow embedding of third party code (e.g. scripts or iframes) without a WYSIWYG editor.",
+    "locked": 1
+}
