@@ -45,9 +45,27 @@ $mincol_width: 16rem;
     width: 100%;
   }
 }
+#field-paragraphs-add-more-wrapper {
+  // Admin page
+  .field-name-pfp-image {
+    img {
+      width: auto;
+    }
+  }
+  .field-name-pfp-video {
+    .field-items {
+      display: block;
+      .field-item {
+        min-width: auto;
+        width: auto;
+        display: inline-block;
+      }
+    }
+  }
+}
 
-/* Gallery */
-.field-name-pfp-gallery {
+/* Gallery, Video */
+.field-name-pfp-gallery, .field-name-pfp-video {
   padding: 2rem 0;
   .field-items {
     display: flex;
@@ -62,55 +80,75 @@ $mincol_width: 16rem;
   }
 }
 .paragraphs-item.pfp-col1 {
-  .field-name-pfp-gallery {
+  .field-name-pfp-gallery, .field-name-pfp-video {
     .field-items {
       .field-item {
         max-width: 100%;
+        width: 100%;
       }
     }
   }
 }
 .paragraphs-item.pfp-col2 {
-  .field-name-pfp-gallery {
+  .field-name-pfp-gallery, .field-name-pfp-video {
     .field-items {
       .field-item {
         max-width: calc(100%/2);
+        width: calc(100%/2);
       }
     }
   }
 }
 .paragraphs-item.pfp-col3 {
-  .field-name-pfp-gallery {
+  .field-name-pfp-gallery, .field-name-pfp-video {
     .field-items {
       .field-item {
         max-width: calc(100%/3);
+        width: calc(100%/3);
       }
     }
   }
 }
 .paragraphs-item.pfp-col4 {
-  .field-name-pfp-gallery {
+  .field-name-pfp-gallery, .field-name-pfp-video {
     .field-items {
       .field-item {
         max-width: calc(100%/4);
+        width: calc(100%/4);
       }
     }
   }
 }
 .paragraphs-item.pfp-col5 {
-  .field-name-pfp-gallery {
+  .field-name-pfp-gallery, .field-name-pfp-video {
     .field-items {
       .field-item {
         max-width: calc(100%/5);
+        width: calc(100%/5);
       }
     }
   }
 }
 .paragraphs-item.pfp-colauto {
-  .field-name-pfp-gallery {
+  .field-name-pfp-gallery, .field-name-pfp-video {
     columns: $mincol_width auto;
+    width: auto;
   }
 }
+
+/* Video */
+.field-name-pfp-video {
+  .field-items {
+    .field-item {
+      flex-grow: 1;
+      .player {
+        text-align: center;
+        min-width: calc(100%/5);
+      }
+    }
+  }
+}
+
 
 
 /* Background Color */

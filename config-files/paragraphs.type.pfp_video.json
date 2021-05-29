@@ -1,0 +1,8 @@
+{
+    "_config_name": "paragraphs.type.pfp_video",
+    "bundle": "pfp_video",
+    "name": "Video",
+    "label": "Video",
+    "description": "Allow easy embedding of a Youtube or Vimeo video by adding the URL, with an optional caption/description.",
+    "locked": 1
+}

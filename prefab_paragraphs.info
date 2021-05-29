@@ -10,5 +10,7 @@ dependencies[] = field_wrappers
 dependencies[] = image
 dependencies[] = manualcrop
 dependencies[] = colorbox
+dependencies[] = video_embed_field
+//recommended[] = fitvids
 
 stylesheets[all][] = css/prefab_paragraphs.css
