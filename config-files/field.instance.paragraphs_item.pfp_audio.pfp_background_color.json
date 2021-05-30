@@ -25,17 +25,9 @@
     "display": {
         "default": {
             "label": "hidden",
-            "type": "list_default",
-            "settings": {
-                "field_wrappers": {
-                    "field_wrapper": "-",
-                    "label_wrapper": "-",
-                    "item_wrapper": "-",
-                    "field_wrapper_class": ""
-                }
-            },
-            "module": "list",
-            "weight": 2
+            "type": "hidden",
+            "weight": "2",
+            "settings": []
         }
     }
 }
