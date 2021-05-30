@@ -1,0 +1,23 @@
+{
+    "_config_name": "field.field.pfp_audio",
+    "field_name": "pfp_audio",
+    "type": "file",
+    "translatable": false,
+    "module": "file",
+    "active": 1,
+    "locked": 0,
+    "cardinality": "-1",
+    "deleted": 0,
+    "entity_types": [],
+    "settings": {
+        "display_field": 0,
+        "display_default": 0,
+        "uri_scheme": "public"
+    },
+    "storage": {
+        "type": "field_sql_storage",
+        "settings": [],
+        "module": "field_sql_storage",
+        "active": 1
+    }
+}

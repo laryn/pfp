@@ -1,0 +1,41 @@
+{
+    "_config_name": "field.instance.paragraphs_item.pfp_audio.pfp_background_color",
+    "field_name": "pfp_background_color",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_audio",
+    "label": "Background color",
+    "widget": {
+        "weight": "4",
+        "type": "options_select",
+        "module": "options",
+        "active": 1,
+        "settings": {
+            "classy_paragraphs_set": ""
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "classy_paragraphs_set": "bgcolor",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "list_default",
+            "settings": {
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                }
+            },
+            "module": "list",
+            "weight": 2
+        }
+    }
+}

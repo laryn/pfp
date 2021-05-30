@@ -1,0 +1,63 @@
+{
+    "_config_name": "field.instance.paragraphs_item.pfp_audio.pfp_audio",
+    "field_name": "pfp_audio",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_audio",
+    "label": "Audio",
+    "widget": {
+        "weight": "1",
+        "type": "file_generic",
+        "module": "file",
+        "active": 1,
+        "settings": {
+            "progress_indicator": "throbber"
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "file_directory": "audio",
+        "file_extensions": "mp3 ogg wav",
+        "max_filesize": "",
+        "description_field": 0,
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "file_audio",
+            "weight": "0",
+            "settings": {
+                "controls": 1,
+                "autoplay": 0,
+                "loop": 0,
+                "preload": "auto",
+                "multiple_file_behavior": "sources",
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                }
+            },
+            "module": "file"
+        },
+        "paragraphs_editor_preview": {
+            "label": "hidden",
+            "type": "file_default",
+            "weight": "0",
+            "settings": {
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                }
+            },
+            "module": "file"
+        }
+    }
+}
