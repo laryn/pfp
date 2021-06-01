@@ -1,0 +1,10 @@
+{
+    "_config_name": "field.bundle.paragraphs_item.pfp_pdf",
+    "bundle": "pfp_pdf",
+    "entity_type": "paragraphs_item",
+    "view_modes": [],
+    "extra_fields": {
+        "form": [],
+        "display": []
+    }
+}

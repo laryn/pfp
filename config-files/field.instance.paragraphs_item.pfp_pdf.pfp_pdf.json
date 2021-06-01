@@ -1,0 +1,44 @@
+{
+    "_config_name": "field.instance.paragraphs_item.pfp_pdf.pfp_pdf",
+    "field_name": "pfp_pdf",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_pdf",
+    "label": "PDF",
+    "widget": {
+        "weight": "1",
+        "type": "file_generic",
+        "module": "file",
+        "active": 1,
+        "settings": {
+            "progress_indicator": "throbber"
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "file_directory": "pdf",
+        "file_extensions": "pdf",
+        "max_filesize": "",
+        "description_field": 0,
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "file_default",
+            "settings": {
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                }
+            },
+            "module": "file",
+            "weight": 0
+        }
+    }
+}

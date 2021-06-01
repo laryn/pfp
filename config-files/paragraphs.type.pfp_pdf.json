@@ -1,0 +1,8 @@
+{
+    "_config_name": "paragraphs.type.pfp_pdf",
+    "bundle": "pfp_pdf",
+    "name": "PDF",
+    "label": "PDF",
+    "description": "Embed a PDF directly into the page using PDF.js.",
+    "locked": 1
+}
