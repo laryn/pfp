@@ -1,0 +1,8 @@
+{
+    "_config_name": "paragraphs.type.quote",
+    "bundle": "pfp_quote",
+    "name": "Quote",
+    "label": "Quote",
+    "description": "Add a pull-quote to help break up the page.",
+    "locked": 1
+}
