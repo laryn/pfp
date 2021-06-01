@@ -28,17 +28,20 @@
     "display": {
         "default": {
             "label": "hidden",
-            "type": "file_default",
+            "type": "pdfjs_default",
+            "weight": "0",
             "settings": {
+                "width": "340px",
+                "height": "440px",
                 "field_wrappers": {
                     "field_wrapper": "-",
                     "label_wrapper": "-",
                     "item_wrapper": "-",
                     "field_wrapper_class": ""
-                }
+                },
+                "keep_pdfjs": true
             },
-            "module": "file",
-            "weight": 0
+            "module": "pdfjs"
         }
     }
 }
