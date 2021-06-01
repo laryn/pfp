@@ -1,0 +1,51 @@
+{
+    "_config_name": "field.instance.paragraphs_item.pfp_files.pfp_files",
+    "field_name": "pfp_files",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_files",
+    "label": "Files",
+    "widget": {
+        "weight": "1",
+        "type": "file_generic",
+        "module": "file",
+        "active": 1,
+        "settings": {
+            "progress_indicator": "throbber"
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "file_directory": "attachments",
+        "file_extensions": "txt doc docx pdf rtf ppt pptx xls xlsx odt odf",
+        "max_filesize": "",
+        "description_field": 1,
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "file_default",
+            "settings": {
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                }
+            },
+            "module": "file",
+            "weight": 0
+        },
+        "paragraphs_editor_preview": {
+            "label": "hidden",
+            "type": "file_default",
+            "weight": "0",
+            "settings": [],
+            "module": "file"
+        }
+    }
+}

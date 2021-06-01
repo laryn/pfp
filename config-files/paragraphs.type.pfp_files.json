@@ -1,0 +1,8 @@
+{
+    "_config_name": "paragraphs.type.pfp_files",
+    "bundle": "pfp_files",
+    "name": "Files",
+    "label": "Files",
+    "description": "Upload one or more files to be presented in a simple list of links for download.",
+    "locked": 1
+}
