@@ -1,4 +1,4 @@
-name = Prefab Paragraphs
+name = PFP - Prefab Paragraphs
 description = Pre-fabricated Paragraph Types to get you started quickly.
 package = Paragraphs
 backdrop = 1.x
@@ -14,4 +14,4 @@ dependencies[] = video_embed_field
 dependencies[] = pdfjs
 //recommended[] = fitvids
 
-stylesheets[all][] = css/prefab_paragraphs.css
+stylesheets[all][] = css/pfp.css

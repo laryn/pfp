@@ -1,4 +1,4 @@
-# Prefab Paragraph Types
+# PFP - Prefab Paragraphs
 
 Pre-fabricated Paragraph Types to get you started quickly.
 
