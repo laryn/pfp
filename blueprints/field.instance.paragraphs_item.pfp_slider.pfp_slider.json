@@ -1,0 +1,86 @@
+{
+    "_config_name": "field.instance.paragraphs_item.pfp_slider.pfp_slider",
+    "field_name": "field_pfp_slider",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_slider",
+    "label": "Slider",
+    "widget": {
+        "weight": "1",
+        "type": "paragraphs_embed",
+        "module": "paragraphs",
+        "active": 0,
+        "settings": []
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "title": "Slide",
+        "title_multiple": "Slides",
+        "default_edit_mode": "preview",
+        "default_edit_mode_override": "4",
+        "add_mode": "button",
+        "separate_edit": 0,
+        "allowed_bundles": {
+            "pfp_audio": -1,
+            "pfp_embed": -1,
+            "pfp_files": -1,
+            "pfp_gallery": -1,
+            "pfp_image": -1,
+            "pfp_pdf": -1,
+            "pfp_quote": -1,
+            "pfp_text": -1,
+            "pfp_video": -1,
+            "slider": -1,
+            "slide": "slide"
+        },
+        "bundle_weights": {
+            "pfp_audio": "2",
+            "pfp_embed": "3",
+            "pfp_files": "4",
+            "pfp_gallery": "5",
+            "pfp_image": "6",
+            "pfp_pdf": "7",
+            "pfp_quote": "8",
+            "pfp_text": "9",
+            "pfp_video": "10",
+            "slider": "12",
+            "slide": "11"
+        },
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "flexslider_paragraphs_formatter",
+            "weight": "0",
+            "settings": {
+                "optionset": "default",
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                }
+            },
+            "module": "flexslider_paragraphs"
+        },
+        "custom_display_mode": {
+            "label": "hidden",
+            "type": "paragraphs_view",
+            "settings": {
+                "view_mode": "full",
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                }
+            },
+            "module": "paragraphs",
+            "weight": 0
+        }
+    }
+}

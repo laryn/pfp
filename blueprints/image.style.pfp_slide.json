@@ -1,0 +1,27 @@
+{
+    "_config_name": "image.style.pfp_slide",
+    "label": "Slide",
+    "name": "pfp_slide",
+    "effects": [
+        {
+            "name": "manualcrop_crop_and_scale",
+            "data": {
+                "width": "1920",
+                "height": "640",
+                "upscale": 1,
+                "respectminimum": 1,
+                "onlyscaleifcrop": 0,
+                "style_name": "slide"
+            },
+            "weight": "0"
+        },
+        {
+            "name": "image_scale_and_crop",
+            "data": {
+                "width": "1920",
+                "height": "640"
+            },
+            "weight": 2
+        }
+    ]
+}

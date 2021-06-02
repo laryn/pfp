@@ -1,0 +1,8 @@
+{
+    "_config_name": "paragraphs.type.pfp_slider",
+    "bundle": "pfp_slider",
+    "name": "Slider",
+    "label": "Slider",
+    "description": "Add content to a slider.",
+    "locked": 1
+}

@@ -1,0 +1,14 @@
+{
+    "_config_name": "field.bundle.paragraphs_item.pfp_slider",
+    "bundle": "pfp_slider",
+    "entity_type": "paragraphs_item",
+    "view_modes": {
+        "custom_display_mode": {
+            "custom_settings": true
+        }
+    },
+    "extra_fields": {
+        "form": [],
+        "display": []
+    }
+}

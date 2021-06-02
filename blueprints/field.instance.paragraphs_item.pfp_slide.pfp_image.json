@@ -1,0 +1,67 @@
+{
+    "_config_name": "field.instance.paragraphs_item.pfp_slide.pfp_image",
+    "field_name": "pfp_image",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_slide",
+    "label": "Image",
+    "widget": {
+        "weight": "3",
+        "type": "image_image",
+        "module": "image",
+        "active": 1,
+        "settings": {
+            "progress_indicator": "throbber",
+            "browser_view": "image_library",
+            "preview_image_style": "thumbnail",
+            "manualcrop_enable": 1,
+            "manualcrop_keyboard": 1,
+            "manualcrop_thumblist": 0,
+            "manualcrop_inline_crop": 0,
+            "manualcrop_crop_info": 1,
+            "manualcrop_instant_preview": 1,
+            "manualcrop_instant_crop": 0,
+            "manualcrop_default_crop_area": 1,
+            "manualcrop_maximize_default_crop_area": 0,
+            "manualcrop_styles_mode": "include",
+            "manualcrop_styles_list": [],
+            "manualcrop_require_cropping": []
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "file_directory": "slide/image",
+        "file_extensions": "png gif jpg jpeg webp",
+        "max_filesize": "",
+        "max_dimensions": "",
+        "min_dimensions": "",
+        "alt_field": 1,
+        "title_field": 0,
+        "orientate": 1,
+        "default_image": "",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "image",
+            "weight": "2",
+            "settings": {
+                "image_style": "slide",
+                "image_link": "",
+                "image_float": "",
+                "image_load": "auto",
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                }
+            },
+            "module": "image"
+        }
+    }
+}
