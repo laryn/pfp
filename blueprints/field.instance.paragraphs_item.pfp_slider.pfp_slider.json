@@ -1,6 +1,6 @@
 {
     "_config_name": "field.instance.paragraphs_item.pfp_slider.pfp_slider",
-    "field_name": "field_pfp_slider",
+    "field_name": "pfp_slider",
     "entity_type": "paragraphs_item",
     "bundle": "pfp_slider",
     "label": "Slider",
