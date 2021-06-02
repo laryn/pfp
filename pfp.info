@@ -6,12 +6,16 @@ type = module
 
 dependencies[] = classy_paragraphs
 dependencies[] = field_group
+
+// Certain types require:
 dependencies[] = field_wrappers
 dependencies[] = image
 dependencies[] = manualcrop
 dependencies[] = colorbox
 dependencies[] = video_embed_field
 dependencies[] = pdfjs
+dependencies[] = flexslider_paragraphs
+
 //recommended[] = fitvids
 
 stylesheets[all][] = css/pfp.css

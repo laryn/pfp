@@ -1,3 +1,70 @@
 <?php
 
-/* Prefab Paragraphs */
+/* PFP - Prefab Paragraphs */
+
+/*
+** Provide valid Paragraph Type blueprints.
+**
+** @todo allow other modules to alter this list.
+*/
+function pfp_available_blueprints($paragraph_type = NULL) {
+    $path = backdrop_get_path('module', 'pfp') . '/blueprints';
+    $blueprints = array(
+        'pfp_embed' => array(
+            'path' => $path,
+            'configs' => array(
+                'field.field.pfp_text_area',
+                'field.bundle.paragraphs_item.pfp_embed',
+                'field.instance.paragraphs_item.pfp_embed.pfp_text_area',
+            ),
+            'dependencies' => array(
+                '',
+            ),
+        ),
+    );
+    if (!empty($paragraph_type)) {
+        if (!empty($blueprints[$paragraph_type])) {
+            // Return single blueprint.
+            return $blueprints[$paragraph_type];
+        }
+        else {
+            // Invalid Paragraph Type requested.
+            return FALSE;
+        }
+    }
+    else {
+        // Return all results.
+        return $blueprints;
+    }
+}
+
+/*
+** Build a paragraph type from the blueprints.
+*/
+function pfp_build_paragraph_type(string $paragraph_type) {
+    $error = '';
+    // See if this Paragraph Type has a valid blueprint.
+    $blueprint = pfp_available_blueprints($paragraph_type);
+    if (!empty($blueprint)) {
+        $pfp_config = config('paragraphs.type.' . $paragraph_type);
+        // See if this Paragraph Type already exists on this site.
+        if ($pfp_config->isNew()) {
+            // If not, create the Paragraph Type.
+            $contents = file_get_contents($blueprint['path'] . '/paragraphs.type.' . $paragraph_type);
+            $data = json_decode($contents, TRUE);
+            $pfp_config->setData($data);
+            $name = $pfp_config->get('name');
+            $pfp_config->save();
+        }
+        else {
+            // This Paragraph Type already exists.
+            $error = t('The %name Paragraph Type already exists.', array('%name' => $pfp_config->get('name')));
+        }
+    }
+    else {
+        $error = t('The requested PFP blueprint does not exist.');
+    }
+    if (empty($error)) {
+        backdrop_set_message(t('The %name Paragraph Type already exists.', array('%name' => $pfp_config->get('name'))));
+    }
+}
