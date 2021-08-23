@@ -5,12 +5,14 @@
 /*
 ** Provide valid Paragraph Type blueprints.
 **
-** @todo allow other modules to alter and add to this list.
+** @todo Allow other modules to alter and add to this list? Search for all
+**       blueprints folders?
 */
-function pfp_available_blueprints($paragraph_type = NULL) {
+function pfp_get_blueprints($paragraph_type = NULL) {
     $path = backdrop_get_path('module', 'pfp') . '/blueprints';
     $blueprints = array(
         'pfp_embed' => array(
+            'machine_name' => 'pfp_embed',
             'name' => t('Embed'),
             'description' => t('A simple text area with no WYSIWYG for pasting embed code in.'),
             'path' => $path,
@@ -40,49 +42,158 @@ function pfp_available_blueprints($paragraph_type = NULL) {
     }
 }
 
+/**
+ * Implements hook_permission().
+ */
+function pfp_permission() {
+  return array(
+    'administer prefab paragraphs' => array(
+      'title' => t('Administer Prefab Paragraphs'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function pfp_menu() {
+  $items['admin/structure/paragraphs/pfp'] = array(
+    'title' => t('Blueprints'),
+    'description' => t('List available Paragraph type blueprints'),
+    'page callback' => 'pfp_overview_blueprints',
+    'access arguments' => array('administer prefab paragraphs'),
+    'type' => MENU_LOCAL_ACTION,
+  );
+  $items['admin/structure/paragraphs/pfp/%/build'] = array(
+    'title' => t('Build a Paragraph type from a blueprint'),
+    'description' => t('Build a Paragraph type from a blueprint'),
+    'page callback' => 'backdrop_get_form',
+    'page arguments' => array('pfp_build_paragraph_type', 4),
+    'access arguments' => array('administer prefab paragraphs'),
+  );
+  return $items;
+}
+
+/**
+ * List all available Paragraph type blueprints.
+ */
+function pfp_overview_blueprints() {
+    backdrop_set_title(t('Build Prefab Paragraph types from blueprints'));
+    $blueprints = pfp_get_blueprints();
+    $header = array(
+        t('Blueprint name'),
+        t('Operations'),
+    );
+    $rows = array();
+
+    foreach ($blueprints as $key => $blueprint) {
+        $blueprint_url_str = str_replace('_', '-', $key);
+        $blueprint_type = new StdClass();
+        $blueprint_type->type = $key;
+        $blueprint_type->description = $blueprint['description'];
+        $row = array(theme('node_admin_overview', array('name' => $blueprint['name'], 'type' => $blueprint_type)));
+        $links = array();
+        $links['build'] = array(
+            'title' => 'Use this blueprint',
+            'href' => 'admin/structure/paragraphs/pfp/' . $blueprint_url_str . '/build',
+            'weight' => 0,
+        );
+        $row[] = array(
+        'data' => array(
+            '#type' => 'operations',
+            '#links' => $links,
+        ),
+        );
+        $rows[] = $row;
+    }
+    $build['pfp_table'] = array(
+    '#theme' => 'table',
+    '#header' => $header,
+    '#rows' => $rows,
+    '#empty' => t('No Paragraph type blueprints available.'),
+    );
+
+    return $build;
+}
+
 /*
 ** Build a paragraph type from the blueprints.
 */
-function pfp_build_paragraph_type(string $paragraph_type) {
-    $error = '';
+function pfp_build_paragraph_type($form, &$form_state, $paragraph_type = NULL) {
+    $paragraph_type = str_replace('-', '_', $paragraph_type);
+    $error = array();
     if (!empty($paragraph_type)) {
         // See if this Paragraph Type has a valid blueprint.
-        $blueprint = pfp_available_blueprints($paragraph_type);
+        $blueprint = pfp_get_blueprints($paragraph_type);
         if (!empty($blueprint)) {
+            $name = $blueprint['name'];
             $pfp_config = config('paragraphs.type.' . $paragraph_type);
             // See if this Paragraph Type already exists on this site.
             if ($pfp_config->isNew()) {
                 // If not, check dependencies and create the Paragraph Type.
                 $fail = 0;
-                foreach (blueprint['dependencies'] as $dependency) {
-                    if (!module_exists($dependency)) {
+                foreach ($blueprint['dependencies'] as $dependency) {
+                    if (!empty($dependency) && !module_exists($dependency)) {
                         $fail = 1;
+                        $error[] = t('The %name Paragraph type could not be built because a dependency is missing.', array('%name' => $name));
                     }
                 }
                 if (!$fail) {
-                    $contents = file_get_contents($blueprint['path'] . '/paragraphs.type.' . $paragraph_type);
-                    $data = json_decode($contents, TRUE);
-                    $pfp_config->setData($data);
-                    $name = $pfp_config->get('name');
-                    $pfp_config->save();
+                    foreach ($blueprint['configs'] as $needed_config) {
+                        $result = _pfp_build_config($blueprint['path'], $needed_config);
+                        if (!empty($result)) {
+                            $error[] = $result;
+                        }
+                    }
+                    $result = _pfp_build_config($blueprint['path'], 'paragraphs.type.' . $blueprint['machine_name']);
+                    if (!empty($result)) {
+                        $error[] = $result;
+                    }
                 }
                 else {
-                    $error = t('The %name Paragraph Type could not be built because a dependency is missing.', array('%name' => $pfp_config->get('name')));
+                    $error[] = t('The %name Paragraph type could not be built.', array('%name' => $name));
                 }
             }
             else {
                 // This Paragraph Type already exists.
-                $error = t('The %name Paragraph Type already exists.', array('%name' => $pfp_config->get('name')));
+                $error[] = t('The %name Paragraph type already exists.', array('%name' => $name));
             }
         }
         else {
-            $error = t('The requested PFP blueprint does not exist.');
+            $error[] = t('The requested blueprint does not exist.');
         }
         if (empty($error)) {
-            backdrop_set_message(t('The %name Paragraph Type has been built according to the blueprint.', array('%name' => $pfp_config->get('name'))));
+            backdrop_set_message(t('The %name Paragraph type has been built according to the blueprint.', array('%name' => $name)));
         }
     }
     else {
         // @todo allow "all" to build all available Paragraphs? Maybe.
     }
+
+    if (!empty($error)) {
+        backdrop_set_message(implode('<br />', $error), 'warning');
+    }
+}
+
+/**
+ * Build a particular config file from a blueprint.
+ */
+function _pfp_build_config($path = '', $machine_name = '') {
+    $error = '';
+    if (!empty($path) && !empty($machine_name)) {
+        $config = config($machine_name);
+        if ($config->isNew()) {
+            $contents = file_get_contents($path . '/' . $machine_name . '.json');
+            $data = json_decode($contents, TRUE);
+            $config->setData($data);
+            $config->save();
+        }
+        else {
+            $error = t('Noted while installing this blueprint: %config already exists.', array('%config' => $machine_name));
+        }
+    }
+    else {
+        $error = t('There was an error installing this blueprint.');
+    }
+    return $error;
 }

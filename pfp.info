@@ -1,8 +1,9 @@
-name = PFP - Prefab Paragraphs
-description = Pre-fabricated Paragraph Types to get you started quickly.
+name = Prefab Paragraphs
+description = Pre-fabricated Paragraph types to get you started quickly. (PFP)
 package = Paragraphs
 backdrop = 1.x
 type = module
+configure = admin/structure/paragraphs/pfp
 
 dependencies[] = classy_paragraphs
 dependencies[] = field_group
@@ -12,10 +13,10 @@ dependencies[] = field_wrappers
 dependencies[] = image
 dependencies[] = manualcrop
 dependencies[] = colorbox
-dependencies[] = video_embed_field
-dependencies[] = pdfjs
-dependencies[] = flexslider_paragraphs
+; dependencies[] = video_embed_field
+; dependencies[] = pdfjs
+; dependencies[] = flexslider_paragraphs
 
-//recommended[] = fitvids
+; recommended[] = fitvids
 
 stylesheets[all][] = css/pfp.css
