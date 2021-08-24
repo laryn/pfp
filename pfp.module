@@ -20,9 +20,55 @@ function pfp_get_blueprints($paragraph_type = NULL) {
                 'field.field.pfp_text_area',
                 'field.bundle.paragraphs_item.pfp_embed',
                 'field.instance.paragraphs_item.pfp_embed.pfp_text_area',
+                'field.bundle.paragraphs_item.pfp_embed',
             ),
             'dependencies' => array(
                 '',
+            ),
+        ),
+        'pfp_text' => array(
+            'machine_name' => 'pfp_text',
+            'name' => t('Text'),
+            'description' => t('A text area with section title and settings for column display.'),
+            'path' => $path,
+            'configs' => array(
+                'classy_paragraphs_ui.sets',
+                'field.field.pfp_section_title',
+                'field.field.pfp_text_area',
+                'field.field.pfp_columns',
+                'field.instance.paragraphs_item.pfp_text.pfp_section_title',
+                'field.instance.paragraphs_item.pfp_text.pfp_text_area',
+                'field.instance.paragraphs_item.pfp_text.pfp_columns',
+                'field_group.field_group.paragraphs_item.pfp_text.form.group_settings',
+                'field.bundle.paragraphs_item.pfp_text',
+            ),
+            'dependencies' => array(
+                'classy_paragraphs',
+                'field_group',
+            ),
+        ),
+        'pfp_image' => array(
+            'machine_name' => 'pfp_image',
+            'name' => t('Image'),
+            'description' => t('An image field that allows free cropping, with settings for section width and background color.'),
+            'path' => $path,
+            'configs' => array(
+                'classy_paragraphs_ui.sets',
+                'image.style.pfp_free_crop',
+                'field.field.pfp_image',
+                'field.field.pfp_background_color',
+                'field.field.pfp_width',
+                'field.instance.paragraphs_item.pfp_image.pfp_image',
+                'field.instance.paragraphs_item.pfp_image.pfp_background_color',
+                'field.instance.paragraphs_item.pfp_image.pfp_width',
+                'field_group.field_group.paragraphs_item.pfp_image.form.group_settings',
+                'field.bundle.paragraphs_item.pfp_image',
+            ),
+            'dependencies' => array(
+                'classy_paragraphs',
+                'field_group',
+                'image',
+                'manualcrop',
             ),
         ),
     );
@@ -78,39 +124,71 @@ function pfp_menu() {
  * List all available Paragraph type blueprints.
  */
 function pfp_overview_blueprints() {
-    backdrop_set_title(t('Build Prefab Paragraph types from blueprints'));
+    backdrop_set_title(t('Prefab Paragraph blueprints'));
     $blueprints = pfp_get_blueprints();
-    $header = array(
-        t('Blueprint name'),
+    $header_unbuilt = array(
+        t('Available Blueprints'),
         t('Operations'),
     );
-    $rows = array();
+    $header_built = array(
+        t('Used Blueprints'),
+        t('Operations'),
+    );
+    $rows_unbuilt = array();
+    $rows_built = array();
 
     foreach ($blueprints as $key => $blueprint) {
+        $already_exists = (config_get('paragraphs.type.' . $blueprint['machine_name'], 'bundle')) ? 1 : 0;
         $blueprint_url_str = str_replace('_', '-', $key);
         $blueprint_type = new StdClass();
         $blueprint_type->type = $key;
         $blueprint_type->description = $blueprint['description'];
         $row = array(theme('node_admin_overview', array('name' => $blueprint['name'], 'type' => $blueprint_type)));
         $links = array();
-        $links['build'] = array(
-            'title' => 'Use this blueprint',
-            'href' => 'admin/structure/paragraphs/pfp/' . $blueprint_url_str . '/build',
-            'weight' => 0,
-        );
-        $row[] = array(
-        'data' => array(
-            '#type' => 'operations',
-            '#links' => $links,
-        ),
-        );
-        $rows[] = $row;
+        if (!$already_exists) {
+            // Doesn't exist -- allow it to be built.
+            $links['build'] = array(
+                'title' => t('Use this blueprint'),
+                'href' => 'admin/structure/paragraphs/pfp/' . $blueprint_url_str . '/build',
+                'weight' => 0,
+            );
+            $row[] = array(
+                'data' => array(
+                    '#type' => 'operations',
+                    '#links' => $links,
+                ),
+            );
+            $rows_unbuilt[$blueprint['name']] = $row;
+        }
+        else {
+            // Already exists -- do not try to rebuild.
+            $links['configure'] = array(
+                'title' => t('Manage fields'),
+                'href' => 'admin/structure/paragraphs/' . $blueprint_url_str . '/fields',
+                'weight' => 0,
+            );
+            $row[] = array(
+                'data' => array(
+                    '#type' => 'operations',
+                    '#links' => $links,
+                ),
+            );
+            $rows_built[$blueprint['name']] = $row;
+        }
     }
-    $build['pfp_table'] = array(
+    ksort($rows_unbuilt);
+    ksort($rows_built);
+    $build['pfp_table_unbuilt'] = array(
     '#theme' => 'table',
-    '#header' => $header,
-    '#rows' => $rows,
+    '#header' => $header_unbuilt,
+    '#rows' => $rows_unbuilt,
     '#empty' => t('No Paragraph type blueprints available.'),
+    );
+    $build['pfp_table_built'] = array(
+    '#theme' => 'table',
+    '#header' => $header_built,
+    '#rows' => $rows_built,
+    '#empty' => t('No Paragraph type blueprints have been used.'),
     );
 
     return $build;
@@ -173,6 +251,7 @@ function pfp_build_paragraph_type($form, &$form_state, $paragraph_type = NULL) {
     if (!empty($error)) {
         backdrop_set_message(implode('<br />', $error), 'warning');
     }
+    backdrop_goto('admin/structure/paragraphs/pfp');
 }
 
 /**
@@ -183,13 +262,15 @@ function _pfp_build_config($path = '', $machine_name = '') {
     if (!empty($path) && !empty($machine_name)) {
         $config = config($machine_name);
         if ($config->isNew()) {
-            $contents = file_get_contents($path . '/' . $machine_name . '.json');
-            $data = json_decode($contents, TRUE);
+            $storage = new ConfigFileStorage($path);
+            $data = $storage->read($machine_name);
             $config->setData($data);
+            module_invoke_all('config_create', $config);
             $config->save();
+            cache_clear_all();
         }
         else {
-            $error = t('Noted while installing this blueprint: %config already exists.', array('%config' => $machine_name));
+            $error = t('Note: %config already exists and has not been changed. This could affect default functionality if it has been modified from the original settings.', array('%config' => $machine_name));
         }
     }
     else {
