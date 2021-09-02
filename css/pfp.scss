@@ -39,6 +39,19 @@ $mincol_width: 16rem;
   }
 }
 
+/* Quote */
+.paragraphs-item-pfp-quote {
+  text-align: center;
+  .field-name-pfp-text-area {
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .field-name-pfp-credit {
+    font-style: italic;
+  }
+}
+
 /* Image */
 .paragraphs-item.fullwidth {
   padding-left: 0;
