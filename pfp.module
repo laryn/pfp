@@ -204,6 +204,29 @@ function pfp_get_blueprints($paragraph_type = NULL) {
                 'flexslider_paragraphs',
             ),
         ),
+        'pfp_view' => array(
+            'machine_name' => 'pfp_view',
+            'name' => t('View'),
+            'description' => t('Insert a View into the content as a Paragraph.'),
+            'path' => $path,
+            'configs' => array(
+                'field.field.pfp_view',
+                'field.field.pfp_background_color',
+                'field.field.pfp_width',
+                'field.field.pfp_columns',
+                'field.instance.paragraphs_item.pfp_view.pfp_background_color',
+                'field.instance.paragraphs_item.pfp_view.pfp_columns',
+                'field.instance.paragraphs_item.pfp_view.pfp_width',
+                'field.instance.paragraphs_item.pfp_view.pfp_view',
+                'field_group.field_group.paragraphs_item.pfp_view.form.group_settings',
+                'field.bundle.paragraphs_item.pfp_view',
+            ),
+            'dependencies' => array(
+                'viewfield',
+                'field_group',
+                'classy_paragraphs',
+            ),
+        ),
     );
     if (!empty($paragraph_type)) {
         if (!empty($blueprints[$paragraph_type])) {
@@ -418,8 +441,8 @@ function pfp_build_paragraph_type($form, &$form_state, $paragraph_type = NULL) {
     if (!empty($error)) {
         backdrop_set_message(implode('<br />', $error), 'warning');
     }
-    cache_clear_all();
-    cache_clear_all();
+    entity_info_cache_clear();
+    menu_rebuild();
     backdrop_goto('admin/structure/paragraphs/pfp');
 }
 

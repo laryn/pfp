@@ -1,0 +1,8 @@
+{
+    "_config_name": "paragraphs.type.pfp_view",
+    "bundle": "pfp_view",
+    "name": "View",
+    "label": "View",
+    "description": "Insert a View into the content as a Paragraph.",
+    "locked": 1
+}

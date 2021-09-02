@@ -1,0 +1,41 @@
+{
+    "_config_name": "field.instance.paragraphs_item.pfp_view.pfp_columns",
+    "field_name": "pfp_columns",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_view",
+    "label": "Columns",
+    "widget": {
+        "weight": "3",
+        "type": "options_select",
+        "module": "options",
+        "active": 1,
+        "settings": {
+            "classy_paragraphs_set": "",
+            "use_select2": false
+        }
+    },
+    "description": "Views that produce multiple rows of results may optionally be displayed in columns.",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "classy_paragraphs_set": "columns",
+        "select2_integration": {
+            "use_select2": 0,
+            "styling": {
+                "placeholder": "",
+                "dropdownAutoWidth": 0
+            }
+        },
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "hidden",
+            "weight": "1",
+            "settings": []
+        }
+    }
+}

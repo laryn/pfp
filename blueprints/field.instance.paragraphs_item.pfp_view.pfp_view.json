@@ -1,0 +1,53 @@
+{
+    "_config_name": "field.instance.paragraphs_item.pfp_view.pfp_view",
+    "field_name": "pfp_view",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_view",
+    "label": "View",
+    "widget": {
+        "weight": "1",
+        "type": "viewfield_select",
+        "module": "viewfield",
+        "active": 0,
+        "settings": []
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "force_default": 0,
+        "allowed_views": {
+            "aids_day_vigil": 0,
+            "banner": 0,
+            "encounters": 0,
+            "file_admin": 0,
+            "hero": 0,
+            "hero_term": 0,
+            "image_library": 0,
+            "landing_pages": 0,
+            "newsnotes": 0,
+            "newsnotes_editions": 0,
+            "node_admin_content": 0,
+            "related": 0,
+            "taxonomy_header": 0,
+            "updates": 0,
+            "user_admin": 0,
+            "webform_analysis": 0,
+            "webform_results": 0,
+            "webform_submissions": 0,
+            "webform_webforms": 0
+        },
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "viewfield_default",
+            "weight": "0",
+            "settings": [],
+            "module": "viewfield"
+        }
+    }
+}
