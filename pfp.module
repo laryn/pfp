@@ -33,6 +33,7 @@ function pfp_get_blueprints($paragraph_type = NULL) {
             'path' => $path,
             'configs' => array(
                 'classy_paragraphs_ui.sets',
+                'classy_paragraphs_ui.classes',
                 'field.field.pfp_section_title',
                 'field.field.pfp_text_area',
                 'field.field.pfp_columns',
@@ -54,6 +55,7 @@ function pfp_get_blueprints($paragraph_type = NULL) {
             'path' => $path,
             'configs' => array(
                 'classy_paragraphs_ui.sets',
+                'classy_paragraphs_ui.classes',
                 'image.style.pfp_free_crop',
                 'field.field.pfp_image',
                 'field.field.pfp_background_color',
@@ -69,6 +71,53 @@ function pfp_get_blueprints($paragraph_type = NULL) {
                 'field_group',
                 'image',
                 'manualcrop',
+            ),
+        ),
+        'pfp_gallery' => array(
+            'machine_name' => 'pfp_gallery',
+            'name' => t('Gallery'),
+            'description' => t('A multi-value image field with various settings.'),
+            'path' => $path,
+            'configs' => array(
+                'image.style.pfp_gallery_thumb',
+                'field.field.pfp_gallery',
+                'field.field.pfp_background_color',
+                'field.field.pfp_columns',
+                'field.field.pfp_width',
+                'field.instance.paragraphs_item.pfp_gallery.pfp_background_color',
+                'field.instance.paragraphs_item.pfp_gallery.pfp_columns',
+                'field.instance.paragraphs_item.pfp_gallery.pfp_gallery',
+                'field.instance.paragraphs_item.pfp_gallery.pfp_width',
+                'field_group.field_group.paragraphs_item.pfp_gallery.form.group_settings',
+                'field.bundle.paragraphs_item.pfp_gallery',
+            ),
+            'dependencies' => array(
+                'colorbox',
+                'classy_paragraphs',
+                'field_group',
+                'image',
+                'manualcrop',
+            ),
+        ),
+        'pfp_video' => array(
+            'machine_name' => 'pfp_video',
+            'name' => t('Video'),
+            'description' => t('A multi-value video field with various settings.'),
+            'path' => $path,
+            'configs' => array(
+                'field.field.pfp_video',
+                'field.field.pfp_background_color',
+                'field.field.pfp_width',
+                'field.instance.paragraphs_item.pfp_video.pfp_background_color',
+                'field.instance.paragraphs_item.pfp_video.pfp_video',
+                'field.instance.paragraphs_item.pfp_video.pfp_width',
+                'field_group.field_group.paragraphs_item.pfp_video.form.group_settings',
+                'field.bundle.paragraphs_item.pfp_video',
+            ),
+            'dependencies' => array(
+                'video_embed_field',
+                'classy_paragraphs',
+                'field_group',
             ),
         ),
     );
@@ -251,6 +300,8 @@ function pfp_build_paragraph_type($form, &$form_state, $paragraph_type = NULL) {
     if (!empty($error)) {
         backdrop_set_message(implode('<br />', $error), 'warning');
     }
+    cache_clear_all();
+    cache_clear_all();
     backdrop_goto('admin/structure/paragraphs/pfp');
 }
 
@@ -267,7 +318,6 @@ function _pfp_build_config($path = '', $machine_name = '') {
             $config->setData($data);
             module_invoke_all('config_create', $config);
             $config->save();
-            cache_clear_all();
         }
         else {
             $error = t('Note: %config already exists and has not been changed. This could affect default functionality if it has been modified from the original settings.', array('%config' => $machine_name));
