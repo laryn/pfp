@@ -120,6 +120,127 @@ function pfp_get_blueprints($paragraph_type = NULL) {
                 'field_group',
             ),
         ),
+        'pfp_audio' => array(
+            'machine_name' => 'pfp_audio',
+            'name' => t('Audio'),
+            'description' => t('An audio field with various settings.'),
+            'path' => $path,
+            'configs' => array(
+                'field.field.pfp_audio',
+                'field.field.pfp_background_color',
+                'field.field.pfp_width',
+                'field.instance.paragraphs_item.pfp_audio.pfp_audio',
+                'field.instance.paragraphs_item.pfp_audio.pfp_background_color',
+                'field.instance.paragraphs_item.pfp_audio.pfp_width',
+                'field_group.field_group.paragraphs_item.pfp_audio.form.group_settings',
+                'field.bundle.paragraphs_item.pfp_audio',
+            ),
+            'dependencies' => array(
+                'classy_paragraphs',
+                'field_group',
+            ),
+        ),
+        'pfp_files' => array(
+            'machine_name' => 'pfp_files',
+            'name' => t('Files'),
+            'description' => t('A multi-value file field.'),
+            'path' => $path,
+            'configs' => array(
+                'field.field.pfp_files',
+                'field.instance.paragraphs_item.pfp_files.pfp_files',
+                'field.bundle.paragraphs_item.pfp_files',
+            ),
+            'dependencies' => array(
+                '',
+            ),
+        ),
+        'pfp_quote' => array(
+            'machine_name' => 'pfp_quote',
+            'name' => t('Quote'),
+            'description' => t('A pull quote and credit.'),
+            'path' => $path,
+            'configs' => array(
+                'field.field.pfp_credit',
+                'field.field.pfp_text_area',
+                'field.field.pfp_background_color',
+                'field.field.pfp_width',
+                'field.instance.paragraphs_item.pfp_quote.pfp_credit',
+                'field.instance.paragraphs_item.pfp_quote.pfp_text_area',
+                'field.instance.paragraphs_item.pfp_quote.pfp_background_color',
+                'field.instance.paragraphs_item.pfp_quote.pfp_width',
+                'field_group.field_group.paragraphs_item.pfp_quote.form.group_settings',
+                'field.bundle.paragraphs_item.pfp_quote',
+            ),
+            'dependencies' => array(
+                'classy_paragraphs',
+                'field_group',
+            ),
+        ),
+        'pfp_slider' => array(
+            'machine_name' => 'pfp_slider',
+            'name' => t('Slider'),
+            'description' => t('A slider for image and text.'),
+            'path' => $path,
+            'configs' => array(
+                'image.style.pfp_slide',
+                'field.field.pfp_image',
+                'field.field.pfp_text_area',
+                'field.instance.paragraphs_item.pfp_slide.pfp_image',
+                'field.instance.paragraphs_item.pfp_slide.pfp_text_area',
+                'field.bundle.paragraphs_item.pfp_slide',
+                'paragraphs.type.pfp_slide',
+                'field.field.pfp_slider',
+                'field.field.pfp_background_color',
+                'field.field.pfp_width',
+                'field.instance.paragraphs_item.pfp_slider.pfp_slider',
+                'field.instance.paragraphs_item.pfp_slider.pfp_background_color',
+                'field.instance.paragraphs_item.pfp_slider.pfp_width',
+                'field_group.field_group.paragraphs_item.pfp_slider.form.group_settings',
+                'field.bundle.paragraphs_item.pfp_slider',
+            ),
+            'dependencies' => array(
+                'classy_paragraphs',
+                'field_group',
+                'flexslider_paragraphs',
+            ),
+        ),
+        'pfp_view' => array(
+            'machine_name' => 'pfp_view',
+            'name' => t('View'),
+            'description' => t('Insert a View into the content as a Paragraph.'),
+            'path' => $path,
+            'configs' => array(
+                'field.field.pfp_view',
+                'field.field.pfp_background_color',
+                'field.field.pfp_width',
+                'field.field.pfp_columns',
+                'field.instance.paragraphs_item.pfp_view.pfp_background_color',
+                'field.instance.paragraphs_item.pfp_view.pfp_columns',
+                'field.instance.paragraphs_item.pfp_view.pfp_width',
+                'field.instance.paragraphs_item.pfp_view.pfp_view',
+                'field_group.field_group.paragraphs_item.pfp_view.form.group_settings',
+                'field.bundle.paragraphs_item.pfp_view',
+            ),
+            'dependencies' => array(
+                'viewfield',
+                'field_group',
+                'classy_paragraphs',
+            ),
+        ),
+        'pfp_pdf' => array(
+            'machine_name' => 'pfp_pdf',
+            'name' => t('PDF'),
+            'description' => t('Embed a PDF into the page.'),
+            'path' => $path,
+            'configs' => array(
+                'field.field.pfp_pdf',
+                'field.instance.paragraphs_item.pfp_pdf.pfp_pdf',
+                'field.bundle.paragraphs_item.pfp_pdf',
+            ),
+            'dependencies' => array(
+                'pdfjs',
+            ),
+        ),
     );
     if (!empty($paragraph_type)) {
         if (!empty($blueprints[$paragraph_type])) {
@@ -175,15 +296,20 @@ function pfp_menu() {
 function pfp_overview_blueprints() {
     backdrop_set_title(t('Prefab Paragraph blueprints'));
     $blueprints = pfp_get_blueprints();
-    $header_unbuilt = array(
+    $header_unbuilt_ready = array(
         t('Available Blueprints'),
         t('Operations'),
+    );
+    $header_unbuilt_missing = array(
+        t('Blueprints which are missing dependencies'),
+        t('Dependencies'),
     );
     $header_built = array(
         t('Used Blueprints'),
         t('Operations'),
     );
-    $rows_unbuilt = array();
+    $rows_unbuilt_ready = array();
+    $rows_unbuilt_missing = array();
     $rows_built = array();
 
     foreach ($blueprints as $key => $blueprint) {
@@ -195,19 +321,37 @@ function pfp_overview_blueprints() {
         $row = array(theme('node_admin_overview', array('name' => $blueprint['name'], 'type' => $blueprint_type)));
         $links = array();
         if (!$already_exists) {
-            // Doesn't exist -- allow it to be built.
-            $links['build'] = array(
-                'title' => t('Use this blueprint'),
-                'href' => 'admin/structure/paragraphs/pfp/' . $blueprint_url_str . '/build',
-                'weight' => 0,
-            );
-            $row[] = array(
-                'data' => array(
-                    '#type' => 'operations',
-                    '#links' => $links,
-                ),
-            );
-            $rows_unbuilt[$blueprint['name']] = $row;
+            // Doesn't exist -- check dependencies.
+            $missing = array();
+            foreach ($blueprint['dependencies'] as $dependency) {
+                if (!empty($dependency) && !module_exists($dependency)) {
+                    $missing[] = $dependency;
+                }
+            }
+            if (empty($missing)) {
+                // Dependencies are all met -- allow it to be built.
+                $links['build'] = array(
+                    'title' => t('Use this blueprint'),
+                    'href' => 'admin/structure/paragraphs/pfp/' . $blueprint_url_str . '/build',
+                    'weight' => 0,
+                );
+                $row[] = array(
+                    'data' => array(
+                        '#type' => 'operations',
+                        '#links' => $links,
+                    ),
+                );
+                $rows_unbuilt_ready[$blueprint['name']] = $row;
+            }
+            else {
+                // Dependencies are missing -- do not allow it to be built.
+                $row[] = array(
+                    'data' => t('Requires:') . ' ' . implode(', ', $missing),
+                );
+                $rows_unbuilt_missing[$blueprint['name']] = $row;
+            }
+
+
         }
         else {
             // Already exists -- do not try to rebuild.
@@ -225,20 +369,31 @@ function pfp_overview_blueprints() {
             $rows_built[$blueprint['name']] = $row;
         }
     }
-    ksort($rows_unbuilt);
+    ksort($rows_unbuilt_ready);
+    ksort($rows_unbuilt_missing);
     ksort($rows_built);
     $build['pfp_table_unbuilt'] = array(
     '#theme' => 'table',
-    '#header' => $header_unbuilt,
-    '#rows' => $rows_unbuilt,
+    '#header' => $header_unbuilt_ready,
+    '#rows' => $rows_unbuilt_ready,
     '#empty' => t('No Paragraph type blueprints available.'),
     );
-    $build['pfp_table_built'] = array(
-    '#theme' => 'table',
-    '#header' => $header_built,
-    '#rows' => $rows_built,
-    '#empty' => t('No Paragraph type blueprints have been used.'),
-    );
+    if (!empty($rows_unbuilt_missing)) {
+        $build['pfp_table_unbuilt_missing'] = array(
+        '#theme' => 'table',
+        '#header' => $header_unbuilt_missing,
+        '#rows' => $rows_unbuilt_missing,
+        '#empty' => t('No Paragraph type blueprints available.'),
+        );
+    }
+    if (!empty($rows_built)) {
+        $build['pfp_table_built'] = array(
+        '#theme' => 'table',
+        '#header' => $header_built,
+        '#rows' => $rows_built,
+        '#empty' => t('No Paragraph type blueprints have been used.'),
+        );
+    }
 
     return $build;
 }
@@ -262,7 +417,7 @@ function pfp_build_paragraph_type($form, &$form_state, $paragraph_type = NULL) {
                 foreach ($blueprint['dependencies'] as $dependency) {
                     if (!empty($dependency) && !module_exists($dependency)) {
                         $fail = 1;
-                        $error[] = t('The %name Paragraph type could not be built because a dependency is missing.', array('%name' => $name));
+                        $error[] = t('The %name Paragraph type could not be built because the %dependency module is not installed.', array('%name' => $name, '%dependency' => $dependency));
                     }
                 }
                 if (!$fail) {
@@ -300,8 +455,8 @@ function pfp_build_paragraph_type($form, &$form_state, $paragraph_type = NULL) {
     if (!empty($error)) {
         backdrop_set_message(implode('<br />', $error), 'warning');
     }
-    cache_clear_all();
-    cache_clear_all();
+    entity_info_cache_clear();
+    menu_rebuild();
     backdrop_goto('admin/structure/paragraphs/pfp');
 }
 

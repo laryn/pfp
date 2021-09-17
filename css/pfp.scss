@@ -39,6 +39,19 @@ $mincol_width: 16rem;
   }
 }
 
+/* Quote */
+.paragraphs-item-pfp-quote {
+  text-align: center;
+  .field-name-pfp-text-area {
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .field-name-pfp-credit {
+    font-style: italic;
+  }
+}
+
 /* Image */
 .paragraphs-item.fullwidth {
   padding-left: 0;
@@ -120,6 +133,25 @@ $mincol_width: 16rem;
     }
   }
 }
+.paragraphs-item.pfp-col1,
+.paragraphs-item.pfp-col2,
+.paragraphs-item.pfp-col3,
+.paragraphs-item.pfp-col4,
+.paragraphs-item.pfp-col5 {
+  .field {
+    .field-items {
+      .field-item {
+        .field-items {
+          .field-item {
+            max-width: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
 .paragraphs-item.pfp-col1 {
   .field-name-pfp-gallery, .field-name-pfp-video {
     .field-items {
