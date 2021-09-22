@@ -150,6 +150,14 @@ $mincol_width: 16rem;
       }
     }
   }
+  .field-name-pfp-section-title {
+    .field-items {
+      h2.field-item {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
 }
 
 .paragraphs-item.pfp-col1 {
