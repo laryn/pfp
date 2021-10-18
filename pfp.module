@@ -211,6 +211,7 @@ function pfp_get_blueprints($paragraph_type = NULL) {
             'dependencies' => array(
                 'classy_paragraphs',
                 'field_group',
+                'image',
                 'flexslider_paragraphs',
             ),
         ),
