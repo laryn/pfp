@@ -5,4 +5,6 @@ backdrop = 1.x
 type = module
 configure = admin/structure/paragraphs/pfp
 
+dependencies[] = paragraphs
+
 stylesheets[all][] = css/pfp.css
