@@ -79,6 +79,8 @@ function pfp_get_blueprints($paragraph_type = NULL) {
             'description' => t('A multi-value image field with various settings.'),
             'path' => $path,
             'configs' => array(
+                'classy_paragraphs_ui.sets',
+                'classy_paragraphs_ui.classes',
                 'image.style.pfp_gallery_thumb',
                 'field.field.pfp_gallery',
                 'field.field.pfp_background_color',
@@ -105,6 +107,8 @@ function pfp_get_blueprints($paragraph_type = NULL) {
             'description' => t('A multi-value video field with various settings.'),
             'path' => $path,
             'configs' => array(
+                'classy_paragraphs_ui.sets',
+                'classy_paragraphs_ui.classes',
                 'field.field.pfp_video',
                 'field.field.pfp_background_color',
                 'field.field.pfp_width',
@@ -126,6 +130,8 @@ function pfp_get_blueprints($paragraph_type = NULL) {
             'description' => t('An audio field with various settings.'),
             'path' => $path,
             'configs' => array(
+                'classy_paragraphs_ui.sets',
+                'classy_paragraphs_ui.classes',
                 'field.field.pfp_audio',
                 'field.field.pfp_background_color',
                 'field.field.pfp_width',
@@ -160,6 +166,8 @@ function pfp_get_blueprints($paragraph_type = NULL) {
             'description' => t('A pull quote and credit.'),
             'path' => $path,
             'configs' => array(
+                'classy_paragraphs_ui.sets',
+                'classy_paragraphs_ui.classes',
                 'field.field.pfp_credit',
                 'field.field.pfp_text_area',
                 'field.field.pfp_background_color',
@@ -182,6 +190,8 @@ function pfp_get_blueprints($paragraph_type = NULL) {
             'description' => t('A slider for image and text.'),
             'path' => $path,
             'configs' => array(
+                'classy_paragraphs_ui.sets',
+                'classy_paragraphs_ui.classes',
                 'image.style.pfp_slide',
                 'field.field.pfp_image',
                 'field.field.pfp_text_area',
@@ -210,6 +220,8 @@ function pfp_get_blueprints($paragraph_type = NULL) {
             'description' => t('Insert a View into the content as a Paragraph.'),
             'path' => $path,
             'configs' => array(
+                'classy_paragraphs_ui.sets',
+                'classy_paragraphs_ui.classes',
                 'field.field.pfp_view',
                 'field.field.pfp_background_color',
                 'field.field.pfp_width',
@@ -225,6 +237,20 @@ function pfp_get_blueprints($paragraph_type = NULL) {
                 'viewfield',
                 'field_group',
                 'classy_paragraphs',
+            ),
+        ),
+        'pfp_pdf' => array(
+            'machine_name' => 'pfp_pdf',
+            'name' => t('PDF'),
+            'description' => t('Embed a PDF into the page.'),
+            'path' => $path,
+            'configs' => array(
+                'field.field.pfp_pdf',
+                'field.instance.paragraphs_item.pfp_pdf.pfp_pdf',
+                'field.bundle.paragraphs_item.pfp_pdf',
+            ),
+            'dependencies' => array(
+                'pdfjs',
             ),
         ),
     );
