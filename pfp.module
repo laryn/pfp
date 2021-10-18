@@ -441,6 +441,12 @@ function pfp_build_paragraph_type($form, &$form_state, $paragraph_type = NULL) {
     if (!empty($error)) {
         backdrop_set_message(implode('<br />', $error), 'warning');
     }
+    // Cleanup expired tempstore entries the same way cron would do, but
+    // without actually running cron.
+    db_delete('tempstore')
+      ->condition('expire', REQUEST_TIME, '<')
+      ->execute();
+      // Clear caches to get the new Paragraphs type loaded.
     entity_info_cache_clear();
     menu_rebuild();
     backdrop_goto('admin/structure/paragraphs/pfp');
