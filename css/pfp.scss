@@ -368,9 +368,6 @@ $mincol_width: 16rem;
   }
 }
 
-
-
-
 /* Background Color */
 .paragraphs-item.greybg {
   background-color: #efefef;
@@ -387,6 +384,8 @@ $mincol_width: 16rem;
   > .content {
     width: $contained-width;
     margin: 0 auto;
+    position: relative;
+    z-index: 999;
   }
 }
 @media (min-width: $tablet-min) {

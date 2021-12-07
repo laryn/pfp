@@ -292,6 +292,8 @@
 .paragraphs-item.contained > .content {
   width: 100%;
   margin: 0 auto;
+  position: relative;
+  z-index: 999;
 }
 
 @media (min-width: 34em) {
