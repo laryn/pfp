@@ -127,6 +127,7 @@ $mincol_width: 16rem;
     .field-item {
       flex-grow: 0;
       padding: .25rem;
+      margin: 0;
       a {
         display: flex;
       }
@@ -349,6 +350,7 @@ $mincol_width: 16rem;
         .views-row {
           flex-grow: 1;
           padding: .25rem;
+          margin: 0;
         }
       }
     }
