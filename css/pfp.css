@@ -139,24 +139,6 @@
   display: flex;
 }
 
-.paragraphs-item.pfp-col1 .field .field-items .field-item .field-items .field-item,
-.paragraphs-item.pfp-col2 .field .field-items .field-item .field-items .field-item,
-.paragraphs-item.pfp-col3 .field .field-items .field-item .field-items .field-item,
-.paragraphs-item.pfp-col4 .field .field-items .field-item .field-items .field-item,
-.paragraphs-item.pfp-col5 .field .field-items .field-item .field-items .field-item {
-  max-width: 100%;
-  width: 100%;
-}
-
-.paragraphs-item.pfp-col1 .field-name-pfp-section-title .field-items h2.field-item,
-.paragraphs-item.pfp-col2 .field-name-pfp-section-title .field-items h2.field-item,
-.paragraphs-item.pfp-col3 .field-name-pfp-section-title .field-items h2.field-item,
-.paragraphs-item.pfp-col4 .field-name-pfp-section-title .field-items h2.field-item,
-.paragraphs-item.pfp-col5 .field-name-pfp-section-title .field-items h2.field-item {
-  max-width: 100%;
-  width: 100%;
-}
-
 .paragraphs-item.pfp-col1 .field-name-pfp-gallery .field-items .field-item, .paragraphs-item.pfp-col1 .field-name-pfp-video .field-items .field-item {
   max-width: 100%;
   width: 100%;
@@ -241,6 +223,24 @@
   -webkit-columns: 16rem auto;
           columns: 16rem auto;
   width: auto;
+}
+
+.paragraphs-item.pfp-col1 .field .field-items .field-item .field-items .field-item,
+.paragraphs-item.pfp-col2 .field .field-items .field-item .field-items .field-item,
+.paragraphs-item.pfp-col3 .field .field-items .field-item .field-items .field-item,
+.paragraphs-item.pfp-col4 .field .field-items .field-item .field-items .field-item,
+.paragraphs-item.pfp-col5 .field .field-items .field-item .field-items .field-item {
+  max-width: 100%;
+  width: 100%;
+}
+
+.paragraphs-item.pfp-col1 .field-name-pfp-section-title .field-items .field-item,
+.paragraphs-item.pfp-col2 .field-name-pfp-section-title .field-items .field-item,
+.paragraphs-item.pfp-col3 .field-name-pfp-section-title .field-items .field-item,
+.paragraphs-item.pfp-col4 .field-name-pfp-section-title .field-items .field-item,
+.paragraphs-item.pfp-col5 .field-name-pfp-section-title .field-items .field-item {
+  max-width: 100%;
+  width: 100%;
 }
 
 .paragraphs-item .field.field-type-viewfield .field-items .field-item {
