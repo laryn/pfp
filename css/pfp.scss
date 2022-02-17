@@ -389,7 +389,7 @@ $mincol_width: 16rem;
   }
 }
 @media (min-width: $tablet-min) {
-  $contained-width: calc(34em - 2*(.9375rem));
+  $contained-width: calc(34rem - 2*(.9375rem));
   .paragraphs-item.contained {
     > .content {
       width: $contained-width;
@@ -398,7 +398,7 @@ $mincol_width: 16rem;
   }
 }
 @media (min-width: $desktop-min) {
-  $contained-width: calc(45em - 2*(.9375rem));
+  $contained-width: calc(45rem - 2*(.9375rem));
   .paragraphs-item.contained {
     > .content {
       width: $contained-width;
@@ -407,7 +407,7 @@ $mincol_width: 16rem;
   }
 }
 @media (min-width: $wide-min) {
-  $contained-width: calc(60em - 2*(.9375rem));
+  $contained-width: calc(60rem - 2*(.9375rem));
   .paragraphs-item.contained {
     > .content {
       width: $contained-width;
@@ -416,7 +416,7 @@ $mincol_width: 16rem;
   }
 }
 @media (min-width: $container-max) {
-  $contained-width: calc(72.25em - 2*(.9375rem));
+  $contained-width: calc(72.25rem - 2*(.9375rem));
   .paragraphs-item.contained {
     > .content {
       width: $contained-width;
