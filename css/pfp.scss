@@ -58,7 +58,7 @@ $mincol_width: 16rem;
   padding-right: 0;
 }
 .field-name-pfp-image {
-  img {
+  img:not(.file-icon) {
     width: 100%;
   }
 }
@@ -381,6 +381,19 @@ $mincol_width: 16rem;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   padding: 1.5rem;
+}
+.paragraphs-modal-admin-sort-form {
+  .paragraphs-item.fullwidth, .paragraphs-item.contained {
+    width: max-content;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.5rem;
+  }
+  .field-name-pfp-image img {
+    width: auto;
+    max-width: 100%;
+  }
 }
 .paragraphs-item.contained {
   > .content {
