@@ -291,6 +291,10 @@
   padding: 1.5rem;
 }
 
+.paragraphs-item.fullwidth {
+  padding: 0;
+}
+
 .paragraphs-modal-admin-sort-form .paragraphs-item.fullwidth, .paragraphs-modal-admin-sort-form .paragraphs-item.contained {
   width: -webkit-max-content;
   width: -moz-max-content;

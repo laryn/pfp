@@ -382,6 +382,9 @@ $mincol_width: 16rem;
   margin-right: calc(50% - 50vw);
   padding: 1.5rem;
 }
+.paragraphs-item.fullwidth {
+  padding: 0;
+}
 .paragraphs-modal-admin-sort-form {
   .paragraphs-item.fullwidth, .paragraphs-item.contained {
     width: max-content;
