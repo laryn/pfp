@@ -295,7 +295,7 @@
   padding: 0;
 }
 
-.paragraphs-modal-admin-sort-form .paragraphs-item.fullwidth, .paragraphs-modal-admin-sort-form .paragraphs-item.contained {
+.paragraphs-modal-admin-sort-form .paragraphs-item.fullwidth, .paragraphs-modal-admin-sort-form .paragraphs-item.contained, .field-multiple-drag .paragraphs-item.fullwidth, .field-multiple-drag .paragraphs-item.contained, table.tabledrag-processed.tabledrag-handles-shown .paragraphs-item.fullwidth, table.tabledrag-processed.tabledrag-handles-shown .paragraphs-item.contained {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -305,7 +305,7 @@
   padding: 1.5rem;
 }
 
-.paragraphs-modal-admin-sort-form .field-name-pfp-image img {
+.paragraphs-modal-admin-sort-form .field-name-pfp-image img, .field-multiple-drag .field-name-pfp-image img, table.tabledrag-processed.tabledrag-handles-shown .field-name-pfp-image img {
   width: auto;
   max-width: 100%;
 }

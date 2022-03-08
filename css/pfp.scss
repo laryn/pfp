@@ -385,7 +385,7 @@ $mincol_width: 16rem;
 .paragraphs-item.fullwidth {
   padding: 0;
 }
-.paragraphs-modal-admin-sort-form {
+.paragraphs-modal-admin-sort-form, .field-multiple-drag, table.tabledrag-processed.tabledrag-handles-shown {
   .paragraphs-item.fullwidth, .paragraphs-item.contained {
     width: max-content;
     max-width: 100%;
