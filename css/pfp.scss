@@ -441,3 +441,25 @@ $mincol_width: 16rem;
   }
 }
 
+/* Admin tweak for sticky header tables */
+.field-type-paragraphs {
+  table.sticky-enabled {
+    max-width: 100%;
+    display: block;
+    tr {
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      flex-flow: row;
+      td {
+        flex-grow: 0;
+      }
+      table.sticky-enabled {
+        td:first-child {
+          flex-grow: 1;
+          max-width: 65%;
+        }
+      }
+    }
+  }
+}
