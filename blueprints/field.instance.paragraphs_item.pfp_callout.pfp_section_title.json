@@ -1,0 +1,41 @@
+{
+    "_config_name": "field.instance.paragraphs_item.pfp_callout.pfp_section_title",
+    "field_name": "pfp_section_title",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_callout",
+    "label": "Callout title",
+    "widget": {
+        "weight": "1",
+        "type": "text_textfield",
+        "module": "text",
+        "active": 1,
+        "settings": {
+            "size": "60"
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "text_processing": "0",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "text_default",
+            "weight": "1",
+            "settings": {
+                "field_wrappers": {
+                    "field_wrapper": "h2",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": "block-title"
+                }
+            },
+            "module": "text"
+        }
+    }
+}

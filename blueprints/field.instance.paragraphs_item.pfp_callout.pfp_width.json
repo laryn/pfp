@@ -1,0 +1,44 @@
+{
+    "_config_name": "field.instance.paragraphs_item.pfp_callout.pfp_width",
+    "field_name": "pfp_width",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_callout",
+    "label": "Width",
+    "widget": {
+        "weight": "5",
+        "type": "options_select",
+        "module": "options",
+        "active": 1,
+        "settings": {
+            "classy_paragraphs_set": ""
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": [
+        {
+            "value": "fullwidth"
+        }
+    ],
+    "default_value_function": null,
+    "settings": {
+        "classy_paragraphs_set": "width",
+        "select2_integration": {
+            "use_select2": 0,
+            "styling": {
+                "placeholder": "",
+                "dropdownAutoWidth": 0
+            }
+        },
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "hidden",
+            "weight": "5",
+            "settings": []
+        }
+    }
+}

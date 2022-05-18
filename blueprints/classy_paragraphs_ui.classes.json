@@ -65,9 +65,12 @@
         "label": "White",
         "sets": {
             "bgcolor": "bgcolor",
+            "color": "color",
             "position": 0,
             "width": 0,
-            "textcolor": 0
+            "bucket": 0,
+            "columns": 0,
+            "alignment": 0
         }
     },
     "tealbg": {
@@ -75,9 +78,12 @@
         "label": "Teal",
         "sets": {
             "bgcolor": "bgcolor",
+            "color": "color",
             "position": 0,
             "width": 0,
-            "textcolor": 0
+            "bucket": 0,
+            "columns": 0,
+            "alignment": 0
         }
     },
     "contained": {
@@ -114,9 +120,12 @@
         "label": "Grey",
         "sets": {
             "bgcolor": "bgcolor",
+            "color": "color",
             "position": 0,
             "width": 0,
-            "bucket": 0
+            "bucket": 0,
+            "columns": 0,
+            "alignment": 0
         }
     },
     "pfp-col1": {
@@ -183,6 +192,30 @@
             "width": 0,
             "bgcolor": 0,
             "bucket": 0
+        }
+    },
+    "pfp-left": {
+        "name": "pfp-left",
+        "label": "Left",
+        "sets": {
+            "alignment": "alignment",
+            "position": 0,
+            "width": 0,
+            "bgcolor": 0,
+            "bucket": 0,
+            "columns": 0
+        }
+    },
+    "pfp-right": {
+        "name": "pfp-right",
+        "label": "Right",
+        "sets": {
+            "alignment": "alignment",
+            "position": 0,
+            "width": 0,
+            "bgcolor": 0,
+            "bucket": 0,
+            "columns": 0
         }
     }
 }

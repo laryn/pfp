@@ -1,0 +1,90 @@
+{
+    "_config_name": "field.instance.paragraphs_item.pfp_callout.field_image",
+    "field_name": "field_image",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_callout",
+    "label": "Image",
+    "widget": {
+        "weight": 0,
+        "type": "image_image",
+        "module": "image",
+        "active": 1,
+        "settings": {
+            "progress_indicator": "throbber",
+            "browser_view": "image_library",
+            "preview_image_style": "thumbnail",
+            "filefield_sources": {
+                "filefield_sources": {
+                    "upload": "upload",
+                    "remote": 0,
+                    "clipboard": 0,
+                    "reference": 0,
+                    "attach": 0
+                },
+                "source_attach": {
+                    "path": "file_attach",
+                    "absolute": "0",
+                    "attach_mode": "move"
+                },
+                "source_imce": {
+                    "imce_mode": 0
+                },
+                "source_reference": {
+                    "autocomplete": "0",
+                    "search_all_fields": "0"
+                }
+            },
+            "manualcrop_enable": 1,
+            "manualcrop_keyboard": 1,
+            "manualcrop_thumblist": 0,
+            "manualcrop_inline_crop": 0,
+            "manualcrop_crop_info": 1,
+            "manualcrop_instant_preview": 1,
+            "manualcrop_instant_crop": 0,
+            "manualcrop_default_crop_area": 1,
+            "manualcrop_maximize_default_crop_area": 0,
+            "manualcrop_styles_mode": "include",
+            "manualcrop_styles_list": [],
+            "manualcrop_require_cropping": []
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "file_directory": "pfp_callout/image",
+        "file_extensions": "png gif jpg jpeg",
+        "max_filesize": "",
+        "max_dimensions": "",
+        "min_dimensions": "",
+        "alt_field": 1,
+        "title_field": 0,
+        "orientate": 1,
+        "default_image": "",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "image",
+            "weight": "0",
+            "settings": {
+                "image_style": "pfp_free_crop",
+                "image_link": "",
+                "image_float": "",
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                },
+                "field_multiple_limit": -1,
+                "field_multiple_limit_offset": 0,
+                "image_load": "auto"
+            },
+            "module": "image"
+        }
+    }
+}

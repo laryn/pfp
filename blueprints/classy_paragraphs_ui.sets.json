@@ -19,5 +19,13 @@
     "columns": {
         "name": "columns",
         "label": "Columns"
+    },
+    "alignment": {
+        "name": "alignment",
+        "label": "Alignment"
+    },
+    "color": {
+        "name": "color",
+        "label": "Color"
     }
 }

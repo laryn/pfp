@@ -1,0 +1,9 @@
+{
+    "_config_name": "paragraphs.type.pfp_callout",
+    "bundle": "pfp_callout",
+    "name": "Callout",
+    "label": "Callout",
+    "description": "Insert a Callout box (image, text, action button).",
+    "locked": 1,
+    "allow_unpublish": 1
+}

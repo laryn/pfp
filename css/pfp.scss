@@ -370,6 +370,42 @@ $mincol_width: 16rem;
   }
 }
 
+/* Callout */
+@media (min-width: $desktop-min) {
+  .paragraphs-item-pfp-callout .content {
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 2fr 3fr;
+    .field {
+      grid-area: right;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    .field-name-pfp-image {
+      grid-area: left;
+      margin-left: 0;
+    }
+  }
+  .paragraphs-item-pfp-callout.pfp-right .content {
+    grid-template-columns: 3fr 2fr;
+    .field {
+      grid-area: left;
+    }
+
+    .field-name-pfp-image {
+      grid-area: right;
+      margin-right: 0;
+    }
+  }
+}
+
+.button {
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
 /* Background Color */
 .paragraphs-item.greybg {
   background-color: #efefef;
