@@ -38,6 +38,15 @@ $mincol_width: 16rem;
     columns: $mincol_width auto;
   }
 }
+.paragraphs-item.pfp-col2,
+.paragraphs-item.pfp-col3,
+.paragraphs-item.pfp-col4,
+.paragraphs-item.pfp-col5,
+.paragraphs-item.pfp-colauto {
+  p {
+    margin-top: 0;
+  }
+}
 
 /* Quote */
 .paragraphs-item-pfp-quote {

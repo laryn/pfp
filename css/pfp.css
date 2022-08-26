@@ -35,6 +35,14 @@
           columns: 16rem auto;
 }
 
+.paragraphs-item.pfp-col2 p,
+.paragraphs-item.pfp-col3 p,
+.paragraphs-item.pfp-col4 p,
+.paragraphs-item.pfp-col5 p,
+.paragraphs-item.pfp-colauto p {
+  margin-top: 0;
+}
+
 /* Quote */
 .paragraphs-item-pfp-quote {
   text-align: center;
