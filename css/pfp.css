@@ -163,8 +163,8 @@
 }
 
 .paragraphs-item.pfp-col2 .field-type-viewfield .view .view-content .views-row {
-  max-width: calc(100%/2);
-  width: calc(100%/2);
+  max-width: calc(100%/2 - 1rem);
+  width: calc(100%/2- 1rem);
 }
 
 @media (min-width: 34em) {
@@ -173,24 +173,24 @@
     width: calc(100%/2);
   }
   .paragraphs-item.pfp-col3 .field-type-viewfield .view .view-content .views-row {
-    max-width: calc(100%/3);
-    width: calc(100%/3);
+    max-width: calc(100%/3 - 2rem);
+    width: calc(100%/3 - 2rem);
   }
   .paragraphs-item.pfp-col4 .field-name-pfp-gallery .field-items .field-item, .paragraphs-item.pfp-col4 .field-name-pfp-video .field-items .field-item, .paragraphs-item.pfp-col4 .field .field-items .field-item {
     max-width: calc(100%/2);
     width: calc(100%/2);
   }
   .paragraphs-item.pfp-col4 .field-type-viewfield .view .view-content .views-row {
-    max-width: calc(100%/2);
-    width: calc(100%/2);
+    max-width: calc(100%/2 - 1rem);
+    width: calc(100%/2 - 1rem);
   }
   .paragraphs-item.pfp-col5 .field-name-pfp-gallery .field-items .field-item, .paragraphs-item.pfp-col5 .field-name-pfp-video .field-items .field-item, .paragraphs-item.pfp-col5 .field .field-items .field-item {
     max-width: calc(100%/2);
     width: calc(100%/2);
   }
   .paragraphs-item.pfp-col5 .field-type-viewfield .view .view-content .views-row {
-    max-width: calc(100%/2);
-    width: calc(100%/2);
+    max-width: calc(100%/2 - 1rem);
+    width: calc(100%/2 - 1rem);
   }
 }
 
@@ -200,24 +200,24 @@
     width: calc(100%/3);
   }
   .paragraphs-item.pfp-col3 .field-type-viewfield .view .view-content .views-row {
-    max-width: calc(100%/3);
-    width: calc(100%/3);
+    max-width: calc(100%/3 - 2rem);
+    width: calc(100%/3 - 2rem);
   }
   .paragraphs-item.pfp-col4 .field-name-pfp-gallery .field-items .field-item, .paragraphs-item.pfp-col4 .field-name-pfp-video .field-items .field-item, .paragraphs-item.pfp-col4 .field .field-items .field-item {
     max-width: calc(100%/4);
     width: calc(100%/4);
   }
   .paragraphs-item.pfp-col4 .field-type-viewfield .view .view-content .views-row {
-    max-width: calc(100%/4);
-    width: calc(100%/4);
+    max-width: calc(100%/4 - 3rem);
+    width: calc(100%/4 - 3rem);
   }
   .paragraphs-item.pfp-col5 .field-name-pfp-gallery .field-items .field-item, .paragraphs-item.pfp-col5 .field-name-pfp-video .field-items .field-item, .paragraphs-item.pfp-col5 .field .field-items .field-item {
     max-width: calc(100%/5);
     width: calc(100%/5);
   }
   .paragraphs-item.pfp-col5 .field-type-viewfield .view .view-content .views-row {
-    max-width: calc(100%/5);
-    width: calc(100%/5);
+    max-width: calc(100%/5 - 4rem);
+    width: calc(100%/5 - 4rem);
   }
 }
 
@@ -271,7 +271,7 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: .25rem;
+  padding: 0;
   margin: 0;
 }
 

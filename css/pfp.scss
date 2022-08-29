@@ -177,8 +177,8 @@ $mincol_width: 16rem;
     .view {
       .view-content {
         .views-row {
-        max-width: calc(100%/2);
-        width: calc(100%/2);
+        max-width: calc(100%/2 - 1rem);
+        width: calc(100%/2- 1rem);
         }
       }
     }
@@ -198,8 +198,8 @@ $mincol_width: 16rem;
       .view {
         .view-content {
           .views-row {
-          max-width: calc(100%/3);
-          width: calc(100%/3);
+          max-width: calc(100%/3 - 2rem);
+          width: calc(100%/3 - 2rem);
           }
         }
       }
@@ -218,8 +218,8 @@ $mincol_width: 16rem;
       .view {
         .view-content {
           .views-row {
-          max-width: calc(100%/2);
-          width: calc(100%/2);
+          max-width: calc(100%/2 - 1rem);
+          width: calc(100%/2 - 1rem);
           }
         }
       }
@@ -238,8 +238,8 @@ $mincol_width: 16rem;
       .view {
         .view-content {
           .views-row {
-          max-width: calc(100%/2);
-          width: calc(100%/2);
+          max-width: calc(100%/2 - 1rem);
+          width: calc(100%/2 - 1rem);
           }
         }
       }
@@ -260,8 +260,8 @@ $mincol_width: 16rem;
       .view {
         .view-content {
           .views-row {
-          max-width: calc(100%/3);
-          width: calc(100%/3);
+          max-width: calc(100%/3 - 2rem);
+          width: calc(100%/3 - 2rem);
           }
         }
       }
@@ -280,8 +280,8 @@ $mincol_width: 16rem;
       .view {
         .view-content {
           .views-row {
-          max-width: calc(100%/4);
-          width: calc(100%/4);
+          max-width: calc(100%/4 - 3rem);
+          width: calc(100%/4 - 3rem);
           }
         }
       }
@@ -300,8 +300,8 @@ $mincol_width: 16rem;
       .view {
         .view-content {
           .views-row {
-          max-width: calc(100%/5);
-          width: calc(100%/5);
+          max-width: calc(100%/5 - 4rem);
+          width: calc(100%/5 - 4rem);
           }
         }
       }
@@ -359,7 +359,7 @@ $mincol_width: 16rem;
         gap: $views-row-margin;
         .views-row {
           flex-grow: 1;
-          padding: .25rem;
+          padding: 0;
           margin:  0;
         }
       }
