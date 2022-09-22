@@ -177,8 +177,8 @@ $mincol_width: 16rem;
     .view {
       .view-content {
         .views-row {
-        min-width: calc(100%/2 - 1rem);
-        width: calc(100%/2- 1rem);
+        min-width: calc(100%/2- #{$views-row-margin});
+        width: calc(100%/2  - #{$views-row-margin});
         }
       }
     }
@@ -198,8 +198,8 @@ $mincol_width: 16rem;
       .view {
         .view-content {
           .views-row {
-          min-width: calc(100%/3 - 2rem);
-          width: calc(100%/3 - 2rem);
+          min-width: calc(100%/3 - 2 * #{$views-row-margin});
+          width: calc(100%/3  - 2 * #{$views-row-margin});
           }
         }
       }
@@ -218,8 +218,8 @@ $mincol_width: 16rem;
       .view {
         .view-content {
           .views-row {
-          min-width: calc(100%/2 - 1rem);
-          width: calc(100%/2 - 1rem);
+          min-width: calc(100%/2 - #{$views-row-margin});
+          width: calc(100%/2 - #{$views-row-margin});
           }
         }
       }
@@ -238,8 +238,8 @@ $mincol_width: 16rem;
       .view {
         .view-content {
           .views-row {
-          min-width: calc(100%/2 - 1rem);
-          width: calc(100%/2 - 1rem);
+          min-width: calc(100%/2 - #{$views-row-margin});
+          width: calc(100%/2 - #{$views-row-margin});
           }
         }
       }
@@ -260,8 +260,8 @@ $mincol_width: 16rem;
       .view {
         .view-content {
           .views-row {
-          min-width: calc(100%/3 - 2rem);
-          width: calc(100%/3 - 2rem);
+          min-width: calc(100%/3 - 2 * #{$views-row-margin});
+          width: calc(100%/3  - 2 * #{$views-row-margin});
           }
         }
       }
@@ -280,8 +280,8 @@ $mincol_width: 16rem;
       .view {
         .view-content {
           .views-row {
-          min-width: calc(100%/4 - 3rem);
-          width: calc(100%/4 - 3rem);
+          min-width: calc(100%/4 - 3 * #{$views-row-margin});
+          width: calc(100%/4  - 3 * #{$views-row-margin});
           }
         }
       }
@@ -300,8 +300,8 @@ $mincol_width: 16rem;
       .view {
         .view-content {
           .views-row {
-          min-width: calc(100%/5 - 4rem);
-          width: calc(100%/5 - 4rem);
+          min-width: calc(100%/5 - 4 * #{$views-row-margin});
+          width: calc(100%/5 - 4 * #{$views-row-margin});
           }
         }
       }
