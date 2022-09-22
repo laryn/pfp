@@ -1,0 +1,30 @@
+{
+    "_config_name": "field_group.field_group.paragraphs_item.pfp_callout.default.group_text_and_link",
+    "group_name": "group_text_and_link",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_callout",
+    "mode": "default",
+    "children": [
+        "pfp_link",
+        "pfp_text_area"
+    ],
+    "parent_name": "",
+    "weight": "1",
+    "label": "Text and link",
+    "format_type": "div",
+    "format_settings": {
+        "label": "Text and link",
+        "instance_settings": {
+            "id": "",
+            "classes": "group-text-and-link field-group-div",
+            "description": "",
+            "show_label": "0",
+            "label_element": "h3",
+            "effect": "none",
+            "speed": "fast"
+        },
+        "formatter": "open"
+    },
+    "collapsible": true,
+    "collapsed": false
+}
