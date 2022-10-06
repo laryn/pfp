@@ -1,15 +1,18 @@
 {
-    "_config_name": "field.field.pfp_link",
-    "field_name": "pfp_link",
-    "type": "link_field",
+    "_config_name": "field.field.pfp_icon",
+    "field_name": "pfp_icon",
+    "type": "image",
     "translatable": false,
-    "module": "link",
+    "module": "image",
     "active": 1,
     "locked": 0,
     "cardinality": "1",
     "deleted": 0,
     "entity_types": [],
-    "settings": [],
+    "settings": {
+        "uri_scheme": "public",
+        "default_image": ""
+    },
     "storage": {
         "type": "field_sql_storage",
         "settings": [],

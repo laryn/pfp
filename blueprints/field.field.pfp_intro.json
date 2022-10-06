@@ -1,0 +1,24 @@
+{
+    "_config_name": "field.field.pfp_intro",
+    "field_name": "pfp_intro",
+    "type": "text_long",
+    "module": "text",
+    "active": 1,
+    "locked": "0",
+    "cardinality": "1",
+    "translatable": "0",
+    "deleted": "0",
+    "entity_types": [],
+    "settings": {
+        "max_length": "",
+        "text_processing": "1",
+        "allowed_values": "",
+        "allowed_values_php": ""
+    },
+    "storage": {
+        "type": "field_sql_storage",
+        "module": "field_sql_storage",
+        "active": 1,
+        "settings": []
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "_config_name": "paragraphs.type.pfp_tile_set",
+    "bundle": "pfp_tile_set",
+    "name": "Tile Set",
+    "label": "Tile Set",
+    "description": "",
+    "locked": 1,
+    "allow_unpublish": 1
+}

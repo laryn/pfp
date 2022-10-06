@@ -1,0 +1,65 @@
+{
+    "_config_name": "field.instance.paragraphs_item.tiles.pfp_link",
+    "field_name": "pfp_link",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_tiles",
+    "label": "Action Link",
+    "widget": {
+        "weight": "5",
+        "type": "link_field",
+        "module": "link",
+        "active": 0,
+        "settings": []
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "validate_url": 1,
+        "url": 0,
+        "title": "required",
+        "title_value": "",
+        "title_label_use_field_label": 0,
+        "title_maxlength": "128",
+        "enable_tokens": 0,
+        "display": {
+            "url_cutoff": "80"
+        },
+        "attributes": {
+            "target": "default",
+            "rel": "",
+            "configurable_class": 0,
+            "class": "",
+            "configurable_title": 0,
+            "title": ""
+        },
+        "rel_remove": "default",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "link_default",
+            "weight": "2",
+            "settings": {
+                "field_multiple_limit": -1,
+                "field_multiple_limit_offset": 0,
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                }
+            },
+            "module": "link"
+        },
+        "paragraphs_editor_preview": {
+            "label": "hidden",
+            "type": "hidden",
+            "weight": "1",
+            "settings": []
+        }
+    }
+}

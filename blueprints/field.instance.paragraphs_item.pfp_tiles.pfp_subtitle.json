@@ -1,0 +1,59 @@
+{
+    "_config_name": "field.instance.paragraphs_item.tiles.pfp_subtitle",
+    "field_name": "pfp_subtitle",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_tiles",
+    "label": "Title",
+    "widget": {
+        "weight": "2",
+        "type": "text_textfield",
+        "module": "text",
+        "active": 1,
+        "settings": {
+            "size": "60"
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "text_processing": "0",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "text_default",
+            "weight": "0",
+            "settings": {
+                "field_multiple_limit": -1,
+                "field_multiple_limit_offset": 0,
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                }
+            },
+            "module": "text"
+        },
+        "paragraphs_editor_preview": {
+            "label": "hidden",
+            "type": "text_default",
+            "weight": "0",
+            "settings": {
+                "field_multiple_limit": -1,
+                "field_multiple_limit_offset": 0,
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                }
+            },
+            "module": "text"
+        }
+    }
+}

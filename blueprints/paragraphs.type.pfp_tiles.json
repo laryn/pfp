@@ -1,0 +1,9 @@
+{
+    "_config_name": "paragraphs.type.pfp_tiles",
+    "bundle": "pfp_tiles",
+    "name": "Tile",
+    "label": "Tile",
+    "description": "",
+    "locked": 1,
+    "allow_unpublish": 1
+}

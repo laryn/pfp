@@ -1,0 +1,99 @@
+{
+    "_config_name": "field.instance.paragraphs_item.pfp_tile_set.pfp_paragraphs",
+    "field_name": "pfp_paragraphs",
+    "entity_type": "paragraphs_item",
+    "bundle": "pfp_tile_set",
+    "label": "Tiles",
+    "widget": {
+        "weight": "3",
+        "type": "paragraphs_embed",
+        "module": "paragraphs",
+        "active": 0,
+        "settings": []
+    },
+    "description": "",
+    "required": 1,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "title": "Tile",
+        "title_multiple": "Tiles",
+        "default_edit_mode": "preview",
+        "default_edit_mode_override": "2",
+        "add_mode": "button",
+        "modal_admin": 0,
+        "allowed_bundles": {
+            "fast_facts": -1,
+            "fast_facts_set": -1,
+            "tile_set": -1,
+            "audio": -1,
+            "callout": -1,
+            "code": -1,
+            "embedded_pdf": -1,
+            "files": -1,
+            "image": -1,
+            "pullquote": -1,
+            "quick_link": -1,
+            "quick_link_set": -1,
+            "text_area": -1,
+            "video": -1,
+            "view": -1,
+            "tiles": "tiles"
+        },
+        "bundle_weights": {
+            "fast_facts": "2",
+            "fast_facts_set": "3",
+            "tile_set": "5",
+            "audio": "7",
+            "callout": "8",
+            "code": "9",
+            "embedded_pdf": "10",
+            "files": "13",
+            "image": "14",
+            "pullquote": "15",
+            "quick_link": "16",
+            "quick_link_set": "17",
+            "text_area": "18",
+            "video": "21",
+            "view": "22",
+            "tiles": "4"
+        },
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "tileset",
+            "weight": "1",
+            "settings": {
+                "field_multiple_limit": -1,
+                "field_multiple_limit_offset": 0,
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                }
+            },
+            "module": "rscjusc_addons"
+        },
+        "paragraphs_editor_preview": {
+            "label": "hidden",
+            "type": "paragraphs_view",
+            "weight": "0",
+            "settings": {
+                "view_mode": "paragraphs_editor_preview",
+                "field_multiple_limit": "-1",
+                "field_multiple_limit_offset": "0",
+                "field_wrappers": {
+                    "field_wrapper": "-",
+                    "label_wrapper": "-",
+                    "item_wrapper": "-",
+                    "field_wrapper_class": ""
+                }
+            },
+            "module": "paragraphs"
+        }
+    }
+}
