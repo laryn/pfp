@@ -24,40 +24,10 @@
         "add_mode": "button",
         "modal_admin": 0,
         "allowed_bundles": {
-            "fast_facts": -1,
-            "fast_facts_set": -1,
-            "tile_set": -1,
-            "audio": -1,
-            "callout": -1,
-            "code": -1,
-            "embedded_pdf": -1,
-            "files": -1,
-            "image": -1,
-            "pullquote": -1,
-            "quick_link": -1,
-            "quick_link_set": -1,
-            "text_area": -1,
-            "video": -1,
-            "view": -1,
-            "tiles": "tiles"
+            "pfp_tiles": "pfp_tiles"
         },
         "bundle_weights": {
-            "fast_facts": "2",
-            "fast_facts_set": "3",
-            "tile_set": "5",
-            "audio": "7",
-            "callout": "8",
-            "code": "9",
-            "embedded_pdf": "10",
-            "files": "13",
-            "image": "14",
-            "pullquote": "15",
-            "quick_link": "16",
-            "quick_link_set": "17",
-            "text_area": "18",
-            "video": "21",
-            "view": "22",
-            "tiles": "4"
+            "pfp_tiles": "1"
         },
         "user_register_form": false
     },
@@ -76,7 +46,7 @@
                     "field_wrapper_class": ""
                 }
             },
-            "module": "rscjusc_addons"
+            "module": ""
         },
         "paragraphs_editor_preview": {
             "label": "hidden",
