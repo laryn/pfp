@@ -425,6 +425,7 @@ $mincol_width: 16rem;
   height: 100%;
   border: none;
   perspective: 1000px;
+  aspect-ratio: 1;
 
   .tile-inner {
     position: relative;
@@ -433,6 +434,7 @@ $mincol_width: 16rem;
     min-height: 240px;
     text-align: center;
     transition: transform 1s;
+    aspect-ratio: 1;
 
     /* Position the front and back side */
     .front,
@@ -442,6 +444,7 @@ $mincol_width: 16rem;
       height: auto;
       backface-visibility: hidden;
       padding: 1.5rem;
+      aspect-ratio: 1;
 
       h2 {
         font-size: 1.4rem;

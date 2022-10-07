@@ -341,6 +341,7 @@
   border: none;
   -webkit-perspective: 1000px;
           perspective: 1000px;
+  aspect-ratio: 1;
 }
 
 .tile .tile-inner {
@@ -353,6 +354,7 @@
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
+  aspect-ratio: 1;
   /* Position the front and back side */
   /* Style the front side */
   /* Style the back side */
@@ -366,6 +368,7 @@
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   padding: 1.5rem;
+  aspect-ratio: 1;
 }
 
 .tile .tile-inner .front h2,

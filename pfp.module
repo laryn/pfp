@@ -538,3 +538,61 @@ function _pfp_build_config($path = '', $machine_name = '') {
     }
     return $error;
 }
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function pfp_field_formatter_info() {
+  return array(
+    'pfp_tileset' => array(
+      'label' => t('Tileset'),
+      'field types' => array('paragraphs'),
+    ),
+);
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function pfp_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, &$items, $display) {
+  $element = array();
+  switch ($display['type']) {
+    case 'pfp_tileset':
+      foreach ($items as $delta => $value) {
+        $list = entity_load('paragraphs_item', array($value['value']));
+        foreach ($list as $listvalue) {
+          if ($listvalue->bundle == 'pfp_tiles') {
+            $image = theme('image_style', array(
+              'uri' => $listvalue->pfp_icon['und'][0]['uri'],
+              'style_name' => 'thumbnail',
+            ));
+            $frontmarkup = $image . "<h3>" . $listvalue->pfp_subtitle['und'][0]['safe_value'] . "</h3>";
+            if (isset($listvalue->pfp_link['und'])) {
+              $backmarkup = "<a href='" . $listvalue->pfp_link['und'][0]['url'] . "'><h2>" . $listvalue->pfp_subtitle['und'][0]['safe_value'] . "</h2><p>" . $listvalue->pfp_intro['und'][0]['safe_value'] . "</p><div class='button'>" . $listvalue->pfp_link['und'][0]['title'] . "</div></a>";
+            } else {
+              $backmarkup = '';
+            }
+            $markup = '<div class="tile">
+                <div class="tile-inner">
+                  <div class="front">
+                    ' . $frontmarkup . '
+                  </div>
+                  <div class="back">
+                    ' . $backmarkup . '
+                  </div>
+                </div>
+              </div>';
+            $element[$delta][$listvalue->item_id] = array(
+              '#markup' => $markup,
+            );
+          }
+        }
+      }
+      if (!empty($element)) {
+        $element['#attached']['js'][] = backdrop_get_path('module', 'pfp') . '/js/jquery.flip.min.js';
+        $element['#attached']['js'][] = backdrop_get_path('module', 'pfp') . '/js/tileset.js';
+      }
+      break;
+  }
+ return $element;
+}
