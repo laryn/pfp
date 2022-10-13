@@ -265,7 +265,7 @@ function pfp_get_blueprints($paragraph_type = NULL) {
                 'field.instance.paragraphs_item.pfp_callout.pfp_link',
                 'field.instance.paragraphs_item.pfp_callout.pfp_text_area',
                 'field_group.field_group.paragraphs_item.pfp_callout.form.group_settings',
-                'field_group.field_group.paragraphs_item.pfp_callout.default.group_text_and_link.json',
+                'field_group.field_group.paragraphs_item.pfp_callout.default.group_text_and_link',
                 'field.bundle.paragraphs_item.pfp_callout',
             ),
             'dependencies' => array(
